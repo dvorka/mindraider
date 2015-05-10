@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<resource>
+  <metadata>
+    <uri>http://dvorka/e-mentality/concept/MR_Documentation#Personal</uri>
+    <author>dvorka</author>
+    <created>1110135619966</created>
+    <revision>8</revision>
+    <timestamp>1110135712539</timestamp>
+    <type>http://e-mental.com/mindraider/owl/class#Concept</type>
+    <mr>0.507</mr>
+  </metadata>
+  <data>
+    <notebookProperty>
+      <uri>http://dvorka/e-mentality/notebook#MR_Documentation</uri>
+    </notebookProperty>
+    <labelProperty>Personal</labelProperty>
+    <annotationProperty>Personal concept.</annotationProperty>
+    <parentConceptUri>http://dvorka/e-mentality/concept/MR_Documentation#ToDo</parentConceptUri>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:categories" label="Categories">
+      <category>
+        <caption>Personal</caption>
+        <value>http://e-mental.com/mindraider/owl/flag#Personal</value>
+      </category>
+    </propertyGroup>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:attachments" label="Attachments" />
+  </data>
+</resource>

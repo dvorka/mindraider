@@ -1,0 +1,366 @@
+2011-12-5: 8.0
+
+    Features
+     o added integration with MindForger enabling MindRaider users to have their 
+       Outlines in the cloud: upload and download
+     o French localization contributed by Alain Goyé. Switch language by going to 
+       menu MindRaider/Preferences/Profile/Force locale - French.
+     o Český překlad - significant improvements of Czech localization
+     o MindRaider license changed from GPL to less restrictive Apache 2.0
+     o improved Outline import from Atom
+     o Jarnal removed as a consequence of the license change:
+       Your sketches might be found in:
+         $HOME/MindRaider/Notebooks/[notebook name]/annotations/*.jaj
+       Download Jarnal to further open and edit them:
+         http://levine.sscnet.ucla.edu/general/software/tc1000/jarnal-down.htm
+     o help menu aligned right
+     o renamed Todo label to ToDo (may impact export/import)
+
+    Fixes
+     o preferences dialog fixed
+     o JVM hang on after MR exit (a non daemon thread not finished) fixed
+
+    Known issues:
+     o czech, french and italian translations are incomplete
+     o Java error ("Blog" outline): Exception in thread "AWT-EventQueue-0" 
+       java.lang.ClassCastException: javax.swing.table.DefaultTableCellRenderer$UIResource 
+       cannot be cast to javax.swing.text.JTextComponent
+
+2009-03-19: 7.6
+    
+    Fixes
+     o UI configuration set to defaults
+     o delete outline when a label is missing
+     o broken labels (missing XML resource) check&fix
+     o robust loading of Outlines (RDF broken -> check & fix)
+     o import/export for sharing
+     
+    Know issues
+     o JVM sometimes keep running after MR exit (a non daemon thread not finished)
+     o Java error ("Blog" outline): Exception in thread "AWT-EventQueue-0" 
+       java.lang.ClassCastException: javax.swing.table.DefaultTableCellRenderer$UIResource 
+       cannot be cast to javax.swing.text.JTextComponent
+
+2009-03-18: 7.5
+
+    Features
+     o terminology: Concept(s) renamed to Note(s)
+     o ctrl-shift-* shortcuts fixed accordingly
+     o new shortcuts to create Note and Outline, 
+       shortcut for full screen,
+       shortcut to go one note back
+     o Note templates: Meeting, Briefing, Report, Coaching GROW model
+     o online check for the latest version
+     o full Outline export/import to/from Atom Syndication Format (except sketches)
+     o link dialog
+    
+    Fixes
+     o source code cleanup
+       - removed: taxonomies, GData integration, ...
+     o outline sorter: modified/created timestamp labels fixed 
+     o splash update (SW removed)  
+     o the problem with false AVG virus detection (hopefully) solved   
+     o creation of attachments (when spiders minimized) and checker 
+       able to fix missing attachments in RDF
+    
+    Know issues
+     o JVM sometimes keep running after MR exit (a non daemon thread not finished)
+
+2008-12-07: 7.3
+
+    Features
+     o empty and restore operations implemented for concept archive
+     o memory info in about dialog
+     o gc() added to check & fix
+     
+    Fixes
+     o source code clean up - v7.2 is the last version with Semantic Web features,
+       all SW components, perspectives, modes and experimental features were removed
+       in order to remove dead code and speed up MindRaider
+     o concept is now deleted in the source outline after the refactor 
+
+    Known issues
+     o JVM sometimes keep running after MR exit (a non daemon thread not finished)
+
+2008-11-03: 7.2
+
+    Features
+     o fixed and configurable order of the annotations type in new concept dialog
+     o asynchronous repository backup progress in status bar (no dialog)
+     o new outline/concept dialog: create with enter, close with escape
+     o about dialog: JRE summary
+     o menu hideable Gnowsis support
+     o questions rendered in blue (rich text annotation)
+     o optimization: spiders rendered only if tab visible
+     o terminology: Notebook(s) renamed to Outline(s)
+     o concept can be selected and/or discarded from the concept panel
+     o check & fix method (checks repository integrity & repairs problems)
+     o outline sorter tab
+     o outline archives tab
+     o concept delete (outline archive)
+    
+    Maintenance
+     o MR now runs on Java 6
+     o UI clean up (menu, perspective & mode icons in the status bar)
+    
+    Fixes
+     o BLOCKER: deadlocks in Touchgraph fixed
+     o renamed outline label now consistent between label's RDF, outline's XML and RDF
+     o on creation of a new outline it is now opened; in addition new concept dialog is triggered
+     o repository backup file name (month) fixed
+     o more precise recent concept hook
+     o more robust loading of corrupted outlines and concepts 
+       (no discarded concepts, empty files, etc.)
+     o explorer menu restructured (outlines at to bottom, toolbar more compact)
+
+    Known issues
+     o JVM sometimes keep running after MR exit (a non daemon thread not finished)
+     o discarded concepts after the refactoring
+
+2008-02-15: 7.1
+
+    Features
+     o MR on tags
+      o tags
+      o tag cloud
+      o tag search
+     o folders replaced with labels
+      o notebook might have several labels
+     o del.icio.us like label/notebooks navigation
+     o new "recent concept" view
+     o UI refactored to simplify searches (central search text field)
+     o installation and upgrade are now non-attended
+     o regular release and early access release upgrade paths
+     o add-hoc concept linking within one notebook is now supported
+     o incremental FTS re-index
+     o MR might be run as executable - no shell window
+     o Spring 2.5 IoC container incorporated
+     o splash screen cleanup
+     o annotations rewritten
+      o in place editors introduced
+      o undo/redo supported
+      o search history implemented
+     o repository backup file name facelift (from ms to year/.../seconds)
+     o TWiki interlinking of concepts within the same notebook
+      o camel word
+      o [[concept name]]
+     
+    Fixes
+     o storing of Preferences/Launchers works
+     o several english bundle fixes
+
+    Maintenance
+     o CVS recommited to mindraider7/ module
+     o project migrated to Maven 2 
+      o source code structure completely changed to follow Maven BPs
+      o brand new POM files
+      o windows/linux/java distros generated by Maven
+     o windows distro migrated to NSIS 2.35
+
+    Known issues
+     o occassionally MR's shell is not closed on exit 
+       (a non-daemon thread not stopped properly)
+     o MR documentation notebooks are obsolete
+     o profiling information on sysout (intentional performance tracking)
+     o icon of the annotation (by its type) is not refreshed on its creation 
+
+2005-10-01: 0.512 KEG Edition (EAP 1)
+
+    Features
+     o auto attachments hiding
+     o improved Gnowsis integration - both linking and browsing is now supported
+     o text annotation wysiwyg
+     o Jarnal integration -  OneNote like editor enabling mighty text/graphics/sketch annotations
+     o interlinking
+      o concept to concept links from the annotation content
+     o annotation content types (text, html, TWiki and Jarnal)
+      o o # x are rendered as lists (single line)
+       o x stays for finished item
+      o ctrl-e toggles editation/browse mode
+     o localization support
+      o Italian version
+     o UI simplification
+      o three perspectives are now available - Outliner, SemanticWeb and Experimental features
+      o concept panel layout changed to show both editor and preview
+       o attachments can be hidden
+       o preview refresh on enter
+     o toolbar hiding
+     o screenshot capture
+     o preferences
+      o enable/disable command daemon (TWiki integration)
+      o force locales
+     o look&feel selection
+     o -d option to run MR in debug mode
+     o new outliner primitives: first and last (move concept to the first/last position on level)
+
+    Fixes
+     o run.bat fixed to delegate parameters
+     o Touchgraph Java 1.5 bug (freeze)
+     o annotation textarea font size in Java 1.5
+
+    Maintenance
+     o distribution is now build with Maven 1
+     o code refactored to Java 1.5
+     o distribution with bundled JRE 1.5 available
+     o new color profile framework (both for graph and annotations)
+
+2005-04-24: 0.511
+
+   Features
+    o internationalization support
+      (tested for czech)
+    o refactoring:
+     o notebook can be moved to another folder
+     o concept can be moved to another notebook
+    o new facet: no attachments
+    o repository backup (menu Tools/Backup Repository)
+    o search: default label search is case insensitive
+    o sample KnoBot related models added to menu Model/Open/URL pull-down
+    o MR now runs Java 1.5. MR can be now compiled&run with 1.5, although there
+      are still internal SWING problems (it hooks from time to time), so I suggest
+      to use 1.4.2 before it will be fixed
+
+   Fixes
+    o documentation 2 mind map reference fixed
+    o hostname quoting on installation fixed
+    o RDF model download connection properties fixed
+      (thanks to Reto Bachmann-Gmuer)
+    o case insensitive regexp for annotation search had no sense
+
+   Maintenance
+    o Lucene powered search rewritten
+    o more robust behavior on missing log4j configuration
+    o * 2 0.511 upgrade
+    o F/N/C discard messages.
+
+   Extra features
+    o Gnowsis button allowing to send arbitrary concept URI to the hub
+      (experimental fake for now)
+
+
+2005-04-05: 0.510
+
+   Maintenance
+    o Java version detection fix
+    o default facet == brief
+
+   Features
+    o aliased/non-aliased graph
+    o hyperbolic/non-hyperbolic graph
+    o FPS visualization
+
+2005-04-03: 0.509
+
+   Features
+    o Drag & Drop support - just drop any link/path over the MR window
+    o Concept lookup window
+    o Find next in annotation search
+    o Folders/Notebooks renaming in the explorer
+    o Folders refactoring
+    o Mode icon in the bottom-right corner
+    o Incorrect Java version detection and warning.
+
+   Extra features
+    o URIQA server browser preview
+
+
+2005-03-13: 0.508
+
+   Features
+    o Windows installer - respect to Nullsoft!
+    o Eclipse like Notebooks loading
+
+   Fixes
+    o Classifiers colors and rendering loop
+    o TWiki import - last section kill
+    o Weekday timestamp rendering
+
+
+2005-03-06: 0.507
+
+   Features
+    o concept classification - important, todo, cool, etc.
+    o key accelators to promote/demote/up/down notebook
+
+   Fixes
+    o TWiki source resource property check NPE
+    o Import from TWiki (last section cut)
+    o MR ontology & profile RDF Model
+    o Selection of Concepts in notebook outline
+    o Documentation notebook URI generation
+
+
+2005-03-01: 0.506
+
+   Features
+    o Brand new data model
+    o Mozex based TWiki integration and remote commander
+    o Lucene powered fulltext search
+    o Trash
+    o Improved OPML export (br)
+    o Major improvements in TWiki preview rendering (big shot to Frederick
+      for providing source code!) - shorthand + CSS
+    o Folders model overview in UI
+    o Notebook outline creation time rendering
+    o Keys
+     o ctrl-s saves the concept
+     o ctrl-f searches the concept annotation
+    o Fullscreen mode
+    o Performance improvements (transition to new model)
+
+   Fixes
+    o Concept auto-save on label change
+    o Notebook outline tree folding fixed
+    o Stream closing fixes
+    o RDF model rendering - rdfs:label is now used for node labels (if available)
+
+
+2005-02-13: 0.502 build 5
+
+   Features
+    o search history and types
+    o TWiki rendering of the Concept annotation
+    o improved concept metadata rendering
+    o "on the fly" OPML export
+
+   Fixes:
+    o order of toolbar panel icons changed
+    o open notebook dialog fixed
+    o Unix startup script fixed
+
+
+2005-02-08: 0.501 build 3
+
+  Maintenance
+    o distribution was stripped by 2MB
+      (junit and obsolete RDF jars removed; tests ripped from Jena)
+
+  Features
+    o searching concepts via Google (graph node context menu)
+
+  Bug fixes
+    o start up scripts may now contain space in JAVA_HOME
+    o jframe 2 jdialog transition
+
+
+2005-02-06: 0.501 build 2
+
+  New features
+    o Menu MindRaider/Preferences
+     o allows you to set custom launcher for web/local attachments
+    o Export to:
+     o TWiki - menu Notebook/Export.../TWiki
+     o OPML - menu Notebook/Export.../OPML
+
+  Bug fixes
+    o selection of the node in the graph navigator loads concept
+    o launching of RDF nodes is more accurate and lauchable nodes are marked
+      with icon
+    o flushing/closing of resource streams fixed
+
+
+2005-01-30: 0.501 build 1
+
+  Initial alpha release - technology preview
+
+- eof -

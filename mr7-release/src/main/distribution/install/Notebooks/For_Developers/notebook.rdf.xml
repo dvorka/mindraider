@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rdf:RDF
+    xmlns:j.1="http://e-mental.com/mindraider/rdf#"
+    xmlns:j.0="http://e-mental.com/mindraider/owl/class#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.2="http://e-mental.com/mindraider/owl/property#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:j.3="http://www.w3.org/1999/xlink#" >
+  <rdf:Description rdf:about="http://savant/e-mentality/concept/For_Developers#RDF___Comp_">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <dc:date>1107112792913</dc:date>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdfs:comment>REST-wise resources are described by the metadata level represented in RDF. 
+
+MR internals are ready to enable categorization using (OWL) ontologies which will in turn enable creation of various Notebook's facets.</rdfs:comment>
+    <rdfs:label>RDF &amp; Comp.</rdfs:label>
+    <j.3:href>Notebooks\For_Developers\concepts\RDF___Comp_.xml</j.3:href>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/For_Developers#conceptTrash">
+    <rdf:_1 rdf:resource="http://savant/e-mentality/concept/For_Developers#OPML"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://savant/e-mentality/notebook#For_Developers">
+    <rdfs:comment></rdfs:comment>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Notebook"/>
+    <rdf:_1 rdf:resource="http://savant/e-mentality/concept/For_Developers#MR_Innards"/>
+    <rdfs:label>For Developers</rdfs:label>
+    <rdf:_3 rdf:resource="http://savant/e-mentality/concept/For_Developers#License"/>
+    <rdf:_2 rdf:resource="http://savant/e-mentality/concept/For_Developers#Concept3rd_party"/>
+    <dc:date>0</dc:date>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://savant/e-mentality/concept/For_Developers#REST_wise_Resources">
+    <rdfs:label>REST-wise Resources</rdfs:label>
+    <rdfs:comment>Data model follows REST rules in terms of URIs, resource design, and their representations. 
+In the future, this architecture will enables me to create cool API allowing MindRaider users to share their cognitive bases in P2P manner.
+
+(Vodyanoi)</rdfs:comment>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <dc:date>1107112762139</dc:date>
+    <j.3:href>Notebooks\For_Developers\concepts\REST_wise_Resources.xml</j.3:href>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://savant/e-mentality/concept/For_Developers#MR_Innards">
+    <dc:date>1107110548035</dc:date>
+    <rdfs:label>MR Innards</rdfs:label>
+    <j.3:href>Notebooks\For_Developers\concepts\MR_Innards.xml</j.3:href>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdf:_1 rdf:resource="http://savant/e-mentality/concept/For_Developers#REST_wise_Resources"/>
+    <rdfs:comment>Just a few Concepts on MindRaider innards.
+
+The core of the MindRaider is its internal data model...
+
+(this notebook applies to MR 0.506)</rdfs:comment>
+    <rdf:_3 rdf:resource="http://savant/e-mentality/concept/For_Developers#Wiki"/>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdf:_2 rdf:resource="http://savant/e-mentality/concept/For_Developers#RDF___Comp_"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://savant/e-mentality/concept/For_Developers#OPML">
+    <dc:date>1107113018888</dc:date>
+    <j.2:isDiscarded>true</j.2:isDiscarded>
+    <j.1:attachment>http://www.opml.org/</j.1:attachment>
+    <rdfs:label>OPML</rdfs:label>
+    <rdfs:comment>Since Notebooks/Concepts are compatible with OPML structure you may await export/import to/from this format.
+</rdfs:comment>
+    <j.3:href>Notebooks\For_Developers\concepts\OPML.xml</j.3:href>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://savant/e-mentality/concept/For_Developers#License">
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <j.1:attachment>http://www.opensource.org/</j.1:attachment>
+    <j.3:href>Notebooks\For_Developers\concepts\License.xml</j.3:href>
+    <rdfs:comment>MindRaider is released under GLP license.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <dc:date>1107110254083</dc:date>
+    <rdfs:label>License</rdfs:label>
+    <j.1:attachment>http://www.gnu.org/copyleft/gpl.html</j.1:attachment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://savant/e-mentality/concept/For_Developers#Wiki">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdfs:label>Wiki</rdfs:label>
+    <rdfs:comment>One of my favorite technologies is Wiki. In order to enable representation of 'auto-inferenced' relationship, TWiki notation will be used in Concept's annotation.</rdfs:comment>
+    <j.3:href>Notebooks\For_Developers\concepts\Wiki.xml</j.3:href>
+    <dc:date>1107113170346</dc:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://savant/e-mentality/concept/For_Developers#Concept3rd_party">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:label>3rd party</rdfs:label>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <j.3:href>Notebooks\For_Developers\concepts\Concept3rd_party.xml</j.3:href>
+    <dc:date>1107110244198</dc:date>
+    <rdfs:comment>This Concept summarizes 3rd party code/libraries/graphics used by MindRaider:
+
+  Jena
+   Semantic Web Framework by HP (http://jena.sourceforge.net/)
+
+  TouchGraph LLC
+   by Alexander Shapiro (http://www.touchgraph.com)
+
+  XML Pull Parser 3 
+   by Ale ...</rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

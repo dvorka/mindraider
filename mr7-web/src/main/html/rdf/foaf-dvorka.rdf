@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rdf:RDF
+   xmlns:xml="http://www.w3.org/XML/1998/namespace"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:rel="http://purl.org/vocab/relationship/"
+   xmlns:rss="http://purl.org/rss/1.0/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:admin="http://webns.net/mvcb/">
+
+<foaf:Person rdf:nodeID="friend1">
+   <foaf:name>Leo Sauermann</foaf:name>
+   <foaf:mbox_sha1sum>eaa363e2b75a11db14e62afb8995340a198e8b9e</foaf:mbox_sha1sum>
+   <rdfs:seeAlso rdf:resource="http://www.gnowsis.com/leo/foaf.xml"/>
+</foaf:Person>
+
+<foaf:Person rdf:nodeID="urn:com:e-mental:members:dvorka">
+   <foaf:title>Mr</foaf:title>
+   <foaf:givenName>Martin</foaf:givenName>
+   <foaf:family_name>Dvorak</foaf:family_name>
+   <foaf:name>Martin Dvorak</foaf:name>
+   <foaf:nick>dvorka</foaf:nick>
+   <foaf:mbox rdf:resource="mailto:ultradvorka@centrum.cz"/>
+   <foaf:mbox_sha1sum>c4b62349020dc94e933b9dd9c0ab6b831077e1b0</foaf:mbox_sha1sum>
+   <foaf:homepage rdf:resource="http://www.e-mental.com/dvorka"/>
+   <foaf:weblog>http://e-mentality.blogspot.com</foaf:weblog>
+   <foaf:depiction rdf:resource="http://www.e-mental.com/dvorka/images/bearSmall.jpg"/>
+   <foaf:icqChatID>76990537</foaf:icqChatID>
+   <foaf:workplaceHomepage rdf:resource="http://www.systinet.com"/>
+   <foaf:schoolHomepage rdf:resource="http://www.cuni.cz"/>
+   <foaf:currentProject rdf:resource="http://mindraider.sourceforge.net"/>
+   <foaf:knows rdf:nodeID="friend1"/>
+</foaf:Person>
+
+<foaf:PersonalProfileDocument rdf:about="urn:com:e-mental:members:dvorka">
+   <foaf:maker rdf:nodeID="urn:com:e-mental:members:dvorka"/>
+   <foaf:primaryTopic rdf:nodeID="urn:com:e-mental:members:dvorka"/>
+   <admin:generatorAgent rdf:resource="http://toxi.co.uk/foafgen/"/>
+   <dcterms:created>2005-05-01T02:58:57CDT</dcterms:created>
+</foaf:PersonalProfileDocument>
+
+</rdf:RDF>

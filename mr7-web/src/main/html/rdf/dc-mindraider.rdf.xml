@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:dt="http://purl.org/dc/terms/"
+         xmlns:contact="http://www.e-mental.com/2005/contact#">
+
+  <dt:Text rdf:about="http://mindraider.sourceforge.net/index.html">
+    <dc:title>MindRaider</dc:title>  
+    <dc:creator rdf:resource = "#dvorka" />
+    <dc:description>Semantic Web outliner homepage.</dc:description>
+    <dc:date>2005-01-10</dc:date>
+  </dt:Text>
+
+  <contact:Person rdf:ID = "urn:com:e-mental:members:dvorka">
+    <contact:mailbox rdf:resource = "mailto:MindRaider@users.sourceforge.net" />
+    <contact:fullName>Martin Dvorak</contact:fullName>
+    <rdf:value>Martin Dvorak, MindRaider@users.sourceforge.net</rdf:value>
+  </contact:Person>
+
+</rdf:RDF>

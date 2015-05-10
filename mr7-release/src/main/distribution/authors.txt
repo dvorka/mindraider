@@ -1,0 +1,27 @@
+
+Author
+
+ Martin Dvorak, <MindRaider@users.sourceforge.net>
+
+   * MindRaider author and primary coder
+
+   If you find this software useful, have suggestions 
+   for improvements or want to contribute, please let 
+   me know!
+
+Contributors
+
+  Alain Goyé
+   * French translation
+
+  Francesco Tinti, <FTinti@users.sourceforge.net> 
+   * Maven 1
+   * 0.511 sources refactoring & improvements
+   * Localization support
+   * Italian translation
+   * Jakarta commons-lang integration
+
+  Reto Bachmann-Gmuer
+   * URIQA browser fixes
+
+- eof -

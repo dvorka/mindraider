@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rdf:RDF
+    xmlns:j.1="http://e-mental.com/mindraider/rdf#"
+    xmlns:j.0="http://e-mental.com/mindraider/owl/class#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:j.2="http://www.w3.org/1999/xlink#" >
+  <rdf:Description rdf:about="http://savant/e-mentality/concept/Introduction#Outliner_Mind_mapper">
+    <rdfs:label>Outliner/Mind mapper</rdfs:label>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:comment>MindRaider is an easy-to-use system for organizing of your resources - local files, analytical documents, images, thoughts, friends, tasks, web links, etc. MindRaider enables you to annotate these resources with metadata describing how they are relat ...</rdfs:comment>
+    <j.2:href>Notebooks\Introduction\concepts\Outliner_Mind_mapper.xml</j.2:href>
+    <dc:date>1107107993282</dc:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://savant/e-mentality/concept/Introduction#MR_on_Web">
+    <j.1:attachment>http://unix.freshmeat.net/projects/mindraider/</j.1:attachment>
+    <j.1:attachment>http://e-mentality.blogspot.com/</j.1:attachment>
+    <rdfs:label>MR on Web</rdfs:label>
+    <j.1:attachment>http://mindraider.sourceforge.net/</j.1:attachment>
+    <j.2:href>Notebooks\Introduction\concepts\MR_on_Web.xml</j.2:href>
+    <dc:date>1107112287336</dc:date>
+    <rdfs:comment>Check MindRaider on the web...</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://savant/e-mentality/concept/Introduction#RDF_Viewer_Editor">
+    <rdfs:comment>MindRaider enables you to browse any RDF model e.g. DublinCore, RSS or FOAF. Also it provides (limited) visual RDF editor capabilities.</rdfs:comment>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <j.2:href>Notebooks\Introduction\concepts\RDF_Viewer_Editor.xml</j.2:href>
+    <dc:date>1107108042082</dc:date>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:label>RDF Viewer/Editor</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://savant/e-mentality/concept/Introduction#Preface">
+    <rdfs:label>Preface</rdfs:label>
+    <rdfs:comment>Welcome to MindRaider!
+</rdfs:comment>
+    <dc:date>1107102483133</dc:date>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <j.2:href>Notebooks\Introduction\concepts\Preface.xml</j.2:href>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/Introduction#TWiki_Integration">
+    <j.2:href>Notebooks\Introduction\concepts\TWiki_Integration.xml</j.2:href>
+    <rdfs:label>TWiki Integration</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:comment>With MindRaider you can edit off-line, refactor, and preview your TWiki topics. Check MindRaider web site for further details. 
+
+</rdfs:comment>
+    <dc:date>1109676096579</dc:date>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/Introduction#Interoperability">
+    <rdfs:label>Interoperability</rdfs:label>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <j.2:href>Notebooks\Introduction\concepts\Interoperability.xml</j.2:href>
+    <dc:date>1109676175292</dc:date>
+    <rdfs:comment>Mind maps created in MindRaider can be exported to: 
+ o OPML 
+ o TWiki 
+and imported from: 
+ o TWiki
+</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://savant/e-mentality/concept/Introduction#Features">
+    <j.2:href>Notebooks\Introduction\concepts\Features.xml</j.2:href>
+    <rdf:_1 rdf:resource="http://savant/e-mentality/concept/Introduction#Outliner_Mind_mapper"/>
+    <rdf:_2 rdf:resource="http://savant/e-mentality/concept/Introduction#RDF_Viewer_Editor"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdf:_3 rdf:resource="http://dvorka/e-mentality/concept/Introduction#TWiki_Integration"/>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdfs:label>Features</rdfs:label>
+    <rdfs:comment>Since the development of the MindRaider just started its functionality is formed by the following set features...
+
+(this notebook applies to MR 0.506)</rdfs:comment>
+    <dc:date>1107107956949</dc:date>
+    <rdf:_4 rdf:resource="http://dvorka/e-mentality/concept/Introduction#Interoperability"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://savant/e-mentality/notebook#Introduction">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdf:_2 rdf:resource="http://savant/e-mentality/concept/Introduction#MR_on_Web"/>
+    <dc:date>0</dc:date>
+    <rdfs:label>Introduction</rdfs:label>
+    <rdf:_1 rdf:resource="http://savant/e-mentality/concept/Introduction#Features"/>
+    <rdfs:comment></rdfs:comment>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Notebook"/>
+  </rdf:Description>
+</rdf:RDF>

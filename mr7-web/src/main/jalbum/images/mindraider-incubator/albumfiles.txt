@@ -1,0 +1,18 @@
+# This file is created by JAlbum. It sets custom file filtering and ordering for this image directory.
+# Each row indicate a file and it's order. Files not listed here are added to the end of the album
+# Rows beginning with "-" indicate excluded files.
+# Rows containing a tab character indicate links, where the text before the tab is the logical file name
+ and the path to the right is the target path.
+# Note: This file allows absolute paths to files and directories in other locations and thereby
+# allows you to compile albums consisting of files from several different locations.
+
+-CVS
+mr.0.screenshot0.png
+mr.0.screenshot1.png
+mr.0.screenshot2.png
+mr.1.channels.jpg
+mr.1.searchModel.jpg
+mr.1.launch.jpg
+mr.1.rdfEdit.jpg
+mr.1.modelExport.jpg
+mr.1.notebookChoice.jpg

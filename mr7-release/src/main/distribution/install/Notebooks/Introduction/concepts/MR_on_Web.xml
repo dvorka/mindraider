@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<resource>
+  <metadata>
+    <uri>http://savant/e-mentality/concept/Introduction#MR_on_Web</uri>
+    <author>dvorka</author>
+    <created>1107112287336</created>
+    <revision>13</revision>
+    <timestamp>1109676191545</timestamp>
+    <type>http://e-mental.com/mindraider/owl/class#Concept</type>
+    <mr>0.506</mr>
+  </metadata>
+  <data>
+    <notebookProperty>
+      <uri>http://savant/e-mentality/notebook#Introduction</uri>
+    </notebookProperty>
+    <labelProperty>MR on Web</labelProperty>
+    <annotationProperty>Check MindRaider on the web...</annotationProperty>
+    <parentConceptUri>http://savant/e-mentality/notebook#Introduction</parentConceptUri>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:attachments" label="Attachments">
+      <attachmentProperty>
+        <description>http://unix.freshmeat.net/projects/mindraider/</description>
+        <url>http://unix.freshmeat.net/projects/mindraider/</url>
+      </attachmentProperty>
+      <attachmentProperty>
+        <description>http://e-mentality.blogspot.com/</description>
+        <url>http://e-mentality.blogspot.com/</url>
+      </attachmentProperty>
+      <attachmentProperty>
+        <description>http://mindraider.sourceforge.net/</description>
+        <url>http://mindraider.sourceforge.net/</url>
+      </attachmentProperty>
+    </propertyGroup>
+  </data>
+</resource>

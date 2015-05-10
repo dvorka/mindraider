@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rdf:RDF
+    xmlns:j.1="http://e-mental.com/mindraider/rdf#"
+    xmlns:j.0="http://e-mental.com/mindraider/owl/class#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.2="http://e-mental.com/mindraider/owl/flag#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:j.3="http://www.w3.org/1999/xlink#" >
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#References">
+    <j.3:href>Notebooks\MR_Documentation\concepts\References.xml</j.3:href>
+    <j.1:attachment>http://www.holloway.co.nz/book/7/</j.1:attachment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <j.1:attachment>http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm</j.1:attachment>
+    <j.1:attachment>http://www.w3.org/TR/owl-features/</j.1:attachment>
+    <rdfs:comment>Check attachments of this topic for relevant documents...</rdfs:comment>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdfs:label>References</rdfs:label>
+    <dc:date>1107102369259</dc:date>
+    <j.1:attachment>http://www.w3.org/RDF/</j.1:attachment>
+    <j.1:attachment>http://www.xfront.com/REST-Web-Services.html</j.1:attachment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Important">
+    <rdfs:comment>Important concept.</rdfs:comment>
+    <rdfs:label>Important</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <dc:date>1110135451674</dc:date>
+    <j.2:flag rdf:resource="http://e-mental.com/mindraider/owl/flag#Important"/>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Important.xml</j.3:href>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Search">
+    <rdf:_3 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#All_notebooks"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <dc:date>1109677825735</dc:date>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Search.xml</j.3:href>
+    <rdf:_1 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Label_regexp"/>
+    <rdfs:label>Search</rdfs:label>
+    <rdfs:comment>There are various ways of howto search your cognitive base maintained by MR. Use upper-right corner search form to...</rdfs:comment>
+    <rdf:_2 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Concept_annotation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Attachments">
+    <rdfs:label>Attachments</rdfs:label>
+    <rdfs:comment>Various resources can be attached to the Concept...</rdfs:comment>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Attachments.xml</j.3:href>
+    <rdf:_1 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Web_resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <dc:date>1107101537032</dc:date>
+    <rdf:_2 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Local_resource"/>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdf:_3 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Launching"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Notebooks">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:label>Notebooks</rdfs:label>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Notebooks.xml</j.3:href>
+    <dc:date>1107101505417</dc:date>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdfs:comment>Concepts are organized to Notebooks.
+
+Basic organization of Concepts is hierarchical - it is available even in this release of MindRaider. Since 'behind the scene' there is RDF model capturing relationships among Concepts, there are various Notebook  ...</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Notebook">
+    <rdf:_1 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Promote_concept"/>
+    <rdf:_3 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Down_concept"/>
+    <rdfs:comment>Also you may arbitrarily refactor Concepts within a Notebook...</rdfs:comment>
+    <dc:date>1107101618259</dc:date>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Notebook.xml</j.3:href>
+    <rdfs:label>Notebook</rdfs:label>
+    <rdf:_4 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Demote_concept"/>
+    <rdf:_2 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Up_concept"/>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Future">
+    <j.1:attachment>http://e-mentality.blogspot.com/</j.1:attachment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:comment>MindRaider is in fact foundation of an ambitious project called e-mentality...
+
+e-mentality is my spare time project since my college studies (late 90's). At the beginning there were just vague ideas. Since that time I had written tons of analyses an ...</rdfs:comment>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Future.xml</j.3:href>
+    <dc:date>1107102373806</dc:date>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdfs:label>Future</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Predicate_Nodes">
+    <dc:date>1107102040206</dc:date>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Predicate_Nodes.xml</j.3:href>
+    <rdfs:label>Predicate Nodes</rdfs:label>
+    <rdfs:comment>Use this item from View menu to allow rendering of whole RDF statements - by default is shown just Subject and Object.</rdfs:comment>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#All_notebooks">
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdfs:label>All notebooks</rdfs:label>
+    <j.3:href>Notebooks\MR_Documentation\concepts\All_notebooks.xml</j.3:href>
+    <dc:date>1109678267570</dc:date>
+    <rdfs:comment>You may search all stored Notebooks and its Concepts using Lucene powered fulltext search. Just choose the last type of the search (folder icon) from the search pull-down in the upper-right corner of this window.
+
+You may also use regular expressions ...</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Resources">
+    <rdf:_1 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Concepts"/>
+    <rdf:_3 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Folders"/>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Resources.xml</j.3:href>
+    <dc:date>1107101397922</dc:date>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdf:_2 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Notebooks"/>
+    <rdfs:label>Resources</rdfs:label>
+    <j.1:attachment>http://e-mentality.blogspot.com/2005/01/model-intro.html</j.1:attachment>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdfs:comment>There are three basic types of resources introduced by MindRaider:
+ o Folders
+ o Notebooks
+ o Concepts
+Let me describe each type in detail...
+
+
+</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Credits">
+    <rdfs:comment>Although this computer program is product of my mind :-) it wouldn't be created without Steven Pinker &amp; Peter Gardenfors &amp; China Mieville &amp; Tim Berners-Lee who provided me with the inspiration and Roy Fielding &amp; Ora Lassila who equipped me with patte ...</rdfs:comment>
+    <rdfs:label>Credits</rdfs:label>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Credits.xml</j.3:href>
+    <dc:date>1107102378442</dc:date>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Launching">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <dc:date>1107644408842</dc:date>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Launching.xml</j.3:href>
+    <rdfs:label>Launching</rdfs:label>
+    <rdfs:comment>You may specify which program should be used for launching of web/local resources by chooseing MindRaider/Preferences... from menu.
+
+By mouse double-click you may launch nodes in the *Graph navigator* (launcheable nodes are marked with _"rocket"_)</rdfs:comment>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Down_concept">
+    <rdfs:label>Down concept</rdfs:label>
+    <rdfs:comment>Down operation allows you to switch Concepts with its next sibling.
+
+Use Notebook toolbar to perform this operation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <dc:date>1107101663484</dc:date>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Down_concept.xml</j.3:href>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Local_resource">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:label>Local resource</rdfs:label>
+    <dc:date>1107101551193</dc:date>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Local_resource.xml</j.3:href>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdfs:comment>Use attachment icon below to attach local document, images, sounds, etc. that further describe the concept.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Demote_concept">
+    <j.3:href>Notebooks\MR_Documentation\concepts\Demote_concept.xml</j.3:href>
+    <rdfs:comment>To Demote Concept means to move such concept down in the tree - it becomes child of its previous sibling.
+
+Use Notebook toolbar to perform this operation.
+</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:label>Demote concept</rdfs:label>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <dc:date>1107101671245</dc:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#View">
+    <dc:date>1107102387175</dc:date>
+    <rdf:_1 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Labels_as_URIs"/>
+    <rdfs:comment>From MindRaider menu you may choose 'View' menu item to change rendering of the Notebook's Concepts.</rdfs:comment>
+    <rdfs:label>View</rdfs:label>
+    <rdf:_4 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Facet"/>
+    <rdf:_2 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Predicate_Nodes"/>
+    <j.3:href>Notebooks\MR_Documentation\concepts\View.xml</j.3:href>
+    <rdf:_3 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Multiline_labels"/>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Obsolete_concept_">
+    <j.2:flag rdf:resource="http://e-mental.com/mindraider/owl/flag#Obsolete"/>
+    <rdfs:label>Obsolete concept.</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:comment>Obsolete concept.</rdfs:comment>
+    <dc:date>1110135693482</dc:date>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Obsolete_concept_.xml</j.3:href>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Promote_concept">
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdfs:comment>Concept promotion moves target Concept one level up (to the level of its parent).
+
+Use Notebook toolbar to perform this operation.</rdfs:comment>
+    <dc:date>1107101639560</dc:date>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Promote_concept.xml</j.3:href>
+    <rdfs:label>Promote concept</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Label_regexp">
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <dc:date>1109677956924</dc:date>
+    <rdfs:label>Label regexp</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:comment>By default you may search Graph navigator's nodes labels. In this case you may use regular expressions, for example:
+ o Note
+ o (Your|Mine) concept
+ o [Aa]cme
+ o Complete name^</rdfs:comment>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Label_regexp.xml</j.3:href>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Graph_Navigation">
+    <rdf:_3 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Launching_"/>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Graph_Navigation.xml</j.3:href>
+    <rdfs:label>Graph Navigation</rdfs:label>
+    <rdfs:comment>Within Notebook you may also navigate using Graph Navigator. This pane allows you to browse Concepts of particular Notebook.
+
+In fact it is just another way of howto render underlaying RDF model that captures Concepts relationships. You may tune deta ...</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdf:_2 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Edit"/>
+    <dc:date>1107101908787</dc:date>
+    <rdf:_1 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#View"/>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Multiline_labels">
+    <j.3:href>Notebooks\MR_Documentation\concepts\Multiline_labels.xml</j.3:href>
+    <rdfs:label>Multiline labels</rdfs:label>
+    <rdfs:comment>Allow wrapping of lines for long literals. This option is enabled by default.</rdfs:comment>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <dc:date>1107102126350</dc:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Up_concept">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <dc:date>1107101647411</dc:date>
+    <rdfs:comment>Up operatio allows you to switch Concept with previous sibling.
+
+Use Notebook toolbar to perform this operation.</rdfs:comment>
+    <rdfs:label>Up concept</rdfs:label>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Up_concept.xml</j.3:href>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Folders">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:comment>Folders enable you to organize Notebooks into thematical domains. You may group e.g. Notebooks related to particular project, activity or research.</rdfs:comment>
+    <rdfs:label>Folders</rdfs:label>
+    <dc:date>1107101509543</dc:date>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Folders.xml</j.3:href>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Export_Import">
+    <rdf:_2 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#OPML_Export"/>
+    <rdfs:label>Export/Import</rdfs:label>
+    <rdf:_1 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#TWiki_Export"/>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Export_Import.xml</j.3:href>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:comment>You may export/import notebook to/from MindRaider...</rdfs:comment>
+    <dc:date>1107643949342</dc:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Concept_annotation">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Concept_annotation.xml</j.3:href>
+    <rdfs:label>Concept annotation</rdfs:label>
+    <rdfs:comment>You may search Concept's annotation - just choose the 2nd type of the search from the pull-down menu in the upper-right corner of this window.
+
+To *refresh* the search index use MindRaider/Rebuild Search Index</rdfs:comment>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <dc:date>1109678166735</dc:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Manipulation">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdf:_2 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Notebook"/>
+    <rdf:_1 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Folder"/>
+    <rdfs:label>Refactoring</rdfs:label>
+    <dc:date>1107101591130</dc:date>
+    <rdfs:comment>Reorganization of Folders, Notebooks and Concepts is key feature of all outliners. Also MindRaider enables you to promote, demote, and move up/down resources in the tree.</rdfs:comment>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Manipulation.xml</j.3:href>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Labels_as_URIs">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:comment>Use item from View menu to show Concept URI instead of its label/local name.</rdfs:comment>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Labels_as_URIs.xml</j.3:href>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdfs:label>Labels as URIs</rdfs:label>
+    <dc:date>1107101959550</dc:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Launching_">
+    <dc:date>1107644482598</dc:date>
+    <rdfs:label>Launching</rdfs:label>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdfs:comment>You may open node/literal URLs by double-clicking a node in graph. All launchable nodes are marked with "rocket" icon.</rdfs:comment>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Launching_.xml</j.3:href>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Cool">
+    <rdfs:comment>Cool concept.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <j.2:flag rdf:resource="http://e-mental.com/mindraider/owl/flag#Cool"/>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdfs:label>Cool</rdfs:label>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Cool.xml</j.3:href>
+    <dc:date>1110135476640</dc:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Later">
+    <j.2:flag rdf:resource="http://e-mental.com/mindraider/owl/flag#Later"/>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Later.xml</j.3:href>
+    <dc:date>1110135653725</dc:date>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:comment>"Do it later" concept.</rdfs:comment>
+    <rdfs:label>Later</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Welcome">
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Welcome.xml</j.3:href>
+    <dc:date>1107101136296</dc:date>
+    <j.1:attachment>http://mindraider.sourceforge.net/</j.1:attachment>
+    <j.1:attachment>http://e-mentality.blogspot.com/</j.1:attachment>
+    <rdfs:comment>This notebook aims to give you a short overview of the MindRaider features.
+
+IMPORTANT: please note that this is the alpha release of MR, therefore features, data formats, etc. are subject of change. I would appreciate any feedback, criticism or bug  ...</rdfs:comment>
+    <j.1:attachment>http://www.bbc.co.uk/radio1/urban/tracklistings/fabgroove/fabio_grooverider_tracklistings_live.shtml</j.1:attachment>
+    <rdfs:label>Welcome</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#ToDo">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <j.2:flag rdf:resource="http://e-mental.com/mindraider/owl/flag#ToDo"/>
+    <rdfs:comment>ToDo concept.</rdfs:comment>
+    <j.3:href>Notebooks\MR_Documentation\concepts\ToDo.xml</j.3:href>
+    <rdfs:label>ToDo</rdfs:label>
+    <dc:date>1110135569754</dc:date>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Edit">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <dc:date>1109677393173</dc:date>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Edit.xml</j.3:href>
+    <rdfs:comment>You may edit RDF models - both Notebook's models or models loaded from menu Model/Open from...
+
+Use right mouse button to click a subject/object or predicate node to get context menu allowing you e.g. to add/remove statements. Do not forget to save m ...</rdfs:comment>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdfs:label>Edit</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Folder">
+    <rdfs:comment>You may modify order of Notebooks within the Folder.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdf:_1 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Up_notebook"/>
+    <rdfs:label>Folder</rdfs:label>
+    <dc:date>1107101598861</dc:date>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Folder.xml</j.3:href>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdf:_2 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Down_notebook"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#For_Developers">
+    <rdfs:label>For Developers</rdfs:label>
+    <j.3:href>Notebooks\MR_Documentation\concepts\For_Developers.xml</j.3:href>
+    <rdfs:comment></rdfs:comment>
+    <dc:date>1107109461012</dc:date>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Concepts">
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdfs:comment>Building blocks of your cognitive base that can be captured by MindRaider are your thoughts, analytical documents, images, friends, local files, tasks, web links, etc. that are represented as Concepts.
+
+Right sidebar allows you to annotate Concepts - ...</rdfs:comment>
+    <dc:date>1107101498427</dc:date>
+    <rdf:_2 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Attachments"/>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Concepts.xml</j.3:href>
+    <rdf:_1 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Classifiers"/>
+    <rdfs:label>Concepts</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Facet">
+    <rdfs:label>Facet</rdfs:label>
+    <dc:date>1107102156693</dc:date>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdfs:comment>Facet menu WILL provide various views of underlaying RDF model. Currently there is just a few basic facets - Brief (which is the default), Normal and Expert that shows all RDF statements e.g. types of the resources.</rdfs:comment>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Facet.xml</j.3:href>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Classifiers">
+    <rdf:_4 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Personal"/>
+    <rdf:_3 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#ToDo"/>
+    <rdfs:comment>Concepts can be classified using MindRaider built-in taxonomies. Currently you may use Flag taxonomy with the following categories...</rdfs:comment>
+    <rdf:_6 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Obsolete_concept_"/>
+    <rdf:_5 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Later"/>
+    <rdf:_1 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Important"/>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Classifiers.xml</j.3:href>
+    <rdf:_2 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Cool"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <dc:date>1110135386411</dc:date>
+    <rdfs:label>Classifiers</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/notebook#MR_Documentation">
+    <rdf:_9 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Credits"/>
+    <rdf:_2 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Resources"/>
+    <rdfs:comment></rdfs:comment>
+    <rdf:_3 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Manipulation"/>
+    <rdf:_5 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Search"/>
+    <rdf:_1 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Welcome"/>
+    <rdf:_7 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#References"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdf:_4 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Graph_Navigation"/>
+    <rdf:_6 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Export_Import"/>
+    <rdfs:label>MR Documentation</rdfs:label>
+    <dc:date>0</dc:date>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Notebook"/>
+    <rdf:_8 rdf:resource="http://dvorka/e-mentality/concept/MR_Documentation#Future"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Web_resource">
+    <rdfs:label>Web resource</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:comment>Use attach button below the annotation text are to attach a web resource (resource that can be accessed using http/https from your browser).</rdfs:comment>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Web_resource.xml</j.3:href>
+    <dc:date>1107101546206</dc:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Up_notebook">
+    <rdfs:comment>Allows you to move Notebook up in the Folder.</rdfs:comment>
+    <rdfs:label>Up notebook</rdfs:label>
+    <dc:date>1107101687188</dc:date>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Up_notebook.xml</j.3:href>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#OPML_Export">
+    <rdfs:comment>Choose Notebook/Export.../OPML from menu.
+
+After that specify directory where to generate OPML representation of the Notebook. On successful export will be launched browser with stylesheeted notebook (Win/IE only).
+
+Also you may use "On-the-fly previ ...</rdfs:comment>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <j.3:href>Notebooks\MR_Documentation\concepts\OPML_Export.xml</j.3:href>
+    <rdfs:label>OPML Export</rdfs:label>
+    <dc:date>1107644140416</dc:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Personal">
+    <rdfs:label>Personal</rdfs:label>
+    <dc:date>1110135619966</dc:date>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:comment>Personal concept.</rdfs:comment>
+    <j.2:flag rdf:resource="http://e-mental.com/mindraider/owl/flag#Personal"/>
+    <j.3:href>Notebooks\MR_Documentation\concepts\Personal.xml</j.3:href>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#TWiki_Export">
+    <j.3:href>Notebooks\MR_Documentation\concepts\TWiki_Export.xml</j.3:href>
+    <dc:date>1107644068533</dc:date>
+    <rdfs:label>TWiki Import/Export</rdfs:label>
+    <rdfs:comment>Choose Notebook/Export.../TWiki from menu.
+
+After that specify directory where to generate TWiki representation of the Notebook.
+
+Also check MindRaider web site for detailed description of the Mozex based TWiki integration - MindRaider can be used as ...</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/concept/MR_Documentation#Down_notebook">
+    <j.3:href>Notebooks\MR_Documentation\concepts\Down_notebook.xml</j.3:href>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:comment>Allows you to move Notebook down in the Folder.</rdfs:comment>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdfs:label>Down notebook</rdfs:label>
+    <dc:date>1107101693718</dc:date>
+  </rdf:Description>
+</rdf:RDF>

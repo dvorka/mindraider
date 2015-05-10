@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<resource>
+  <metadata>
+    <uri>http://savant/e-mentality/concept/For_Developers#MR_Innards</uri>
+    <author>dvorka</author>
+    <created>1107110548035</created>
+    <revision>37</revision>
+    <timestamp>1109678734892</timestamp>
+    <type>http://e-mental.com/mindraider/owl/class#Concept</type>
+    <mr>0.506</mr>
+  </metadata>
+  <data>
+    <notebookProperty>
+      <uri>http://savant/e-mentality/notebook#For_Developers</uri>
+    </notebookProperty>
+    <labelProperty>MR Innards</labelProperty>
+    <annotationProperty>Just a few Concepts on MindRaider innards.
+
+The core of the MindRaider is its internal data model...
+
+(this notebook applies to MR 0.506)</annotationProperty>
+    <parentConceptUri>http://savant/e-mentality/notebook#For_Developers</parentConceptUri>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:attachments" label="Attachments" />
+  </data>
+</resource>

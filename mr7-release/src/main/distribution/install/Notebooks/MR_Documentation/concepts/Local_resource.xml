@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<resource>
+  <metadata>
+    <uri>http://dvorka/e-mentality/concept/MR_Documentation#Local_resource</uri>
+    <author>dvorka</author>
+    <created>1107101551193</created>
+    <revision>17</revision>
+    <timestamp>1109676718833</timestamp>
+    <type>http://e-mental.com/mindraider/owl/class#Concept</type>
+    <mr>0.506</mr>
+  </metadata>
+  <data>
+    <notebookProperty>
+      <uri>http://dvorka/e-mentality/notebook#MR_Documentation</uri>
+    </notebookProperty>
+    <labelProperty>Local resource</labelProperty>
+    <annotationProperty>Use attachment icon below to attach local document, images, sounds, etc. that further describe the concept.</annotationProperty>
+    <parentConceptUri>http://dvorka/e-mentality/concept/MR_Documentation#Attachments</parentConceptUri>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:attachments" label="Attachments" />
+  </data>
+</resource>

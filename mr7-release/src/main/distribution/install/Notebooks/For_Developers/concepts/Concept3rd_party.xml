@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<resource>
+  <metadata>
+    <uri>http://savant/e-mentality/concept/For_Developers#Concept3rd_party</uri>
+    <author>dvorka</author>
+    <created>1107110244198</created>
+    <revision>48</revision>
+    <timestamp>1109678732759</timestamp>
+    <type>http://e-mental.com/mindraider/owl/class#Concept</type>
+    <mr>0.506</mr>
+  </metadata>
+  <data>
+    <notebookProperty>
+      <uri>http://savant/e-mentality/notebook#For_Developers</uri>
+    </notebookProperty>
+    <labelProperty>3rd party</labelProperty>
+    <annotationProperty>This Concept summarizes 3rd party code/libraries/graphics used by MindRaider:
+
+  Jena
+   Semantic Web Framework by HP (http://jena.sourceforge.net/)
+
+  TouchGraph LLC
+   by Alexander Shapiro (http://www.touchgraph.com)
+
+  XML Pull Parser 3 
+   by Aleksander Slominski (http://www.extreme.indiana.edu/soap/xpp/)
+
+  Crystal Icons
+   by  Everaldo Coelho (http://www.everaldo.com/crystal.html)
+
+  Browser Launcher
+   by Eric Albert (ejalbert@cs.stanford.edu)
+
+  TableTree SWING component
+   by Philip Milne and Scott Violet (http://java.sun.com)
+   
+  Log4J
+   http://logging.apache.org
+   
+  L2FProd.com Common Components
+    http://common.L2FProd.com
+
+  OPML CSS/JS/XSLT
+    Joshua Allen &lt;joshuaa@netcrucible.com>
+    
+  TWiki2Html
+    by Frederic Luddeni
+    
+  Lucene
+    http://jakarta.apache.org/lucene
+</annotationProperty>
+    <parentConceptUri>http://savant/e-mentality/notebook#For_Developers</parentConceptUri>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:attachments" label="Attachments" />
+  </data>
+</resource>

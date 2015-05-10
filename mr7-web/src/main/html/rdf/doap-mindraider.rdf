@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns="http://usefulinc.com/ns/doap#">
+
+<!--
+    Though it is recommended DOAP files start with Project as the document
+    element, they can be full fledged RDF files like this one is.  Just
+    don't expect the validator to work on them.  You are assumed to know
+    what you're doing if you do it like this :)
+-->
+
+<Project>
+	<name>MindRaider</name>
+	<homepage rdf:resource="http://mindraider.sourceforge.net" />
+	<created>2005-01-30</created>
+	<shortdesc xml:lang="en">
+          MindRaider Semantic Web Outliner
+	</shortdesc>
+
+	<description xml:lang="en">
+          MindRaider is Semantic Web outliner. It aims to connect the
+          tradition of outline editors with emerging
+          technologies. MindRaider mission is to organize not only the
+          content of your hard drive but also your cognitive base and
+          social relationships in a way that enables quick navigation,
+          concise representation and inferencing.
+	</description>
+
+	<release>
+		<Version>
+			<name>alpha</name>
+			<created>2005-05-01</created>
+			<revision>0.511</revision>
+		</Version>
+	</release>
+
+	<mailing-list rdf:resource="http://sourceforge.net/forum/forum.php?forum_id=436607" />
+	<mailing-list rdf:resource="http://sourceforge.net/forum/forum.php?forum_id=436606" />
+
+	<download-page rdf:resource="http://sourceforge.net/project/showfiles.php?group_id=128454" />
+
+	<maintainer>
+		<foaf:Person>
+			<foaf:name>Martin Dvorak</foaf:name>
+			<foaf:mbox_sha1sum>c4b62349020dc94e933b9dd9c0ab6b831077e1b0</foaf:mbox_sha1sum>
+			<rdfs:seeAlso rdf:resource="http://mindraider.sourceforge.net/rdf/foaf-dvorka.rdf" />
+		</foaf:Person>
+	</maintainer>
+
+	<!-- Freshmeat categories -->
+	<category rdf:resource="http://software.freshmeat.net/browse/9/" />
+	<category rdf:resource="http://software.freshmeat.net/browse/3/" />
+	<category rdf:resource="http://software.freshmeat.net/browse/15/" />
+	<category rdf:resource="http://software.freshmeat.net/browse/235/" />
+	<category rdf:resource="http://software.freshmeat.net/browse/198/" />
+	<category rdf:resource="http://software.freshmeat.net/browse/1015/" />
+
+	<!-- Sourceforge category: -->
+	<category rdf:resource="http://sourceforge.net/softwaremap/trove_list.php?form_cat=471" />
+
+	<!-- Licensing details -->
+	<license rdf:resource="http://usefulinc.com/doap/licenses/gpl" />
+
+	<!-- source repository -->
+	<repository>
+		<CVSRepository>
+			<anon-root>:pserver:anonymous@cvs.sourceforge.net:/cvsroot/mindraider</anon-root>
+			<module>mindraider</module>
+			<browse rdf:resource="http://cvs.sourceforge.net/viewcvs.py/mindraider/" />
+		</CVSRepository>
+	</repository>
+
+</Project>
+
+<!--
+     optional administravia:
+     authoring tools can add more here if they'd like.
+ -->
+<rdf:Description rdf:about="urn:com:e-mental:members:dvorka">
+	<foaf:maker>
+		<foaf:Person>
+			<foaf:name>Martin Dvorak</foaf:name>
+			<foaf:mbox rdf:resource="mailto:UltraDvorka@centrum.cz" />
+		</foaf:Person>
+	</foaf:maker>
+</rdf:Description>
+
+
+</rdf:RDF>

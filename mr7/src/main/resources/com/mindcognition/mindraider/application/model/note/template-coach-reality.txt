@@ -1,0 +1,7 @@
+Description:
+ o Describe frankly current reality.
+
+Questions:
+ o What are the problems?
+ o What you already have? Is it usable? Should it be reused or would it be better to
+   start over?

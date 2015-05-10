@@ -1,0 +1,131 @@
+body {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 12px;
+	color: #a2a19a;
+	background-color: #5B5848;
+	margin: 0px;
+	padding: 0px;
+}
+
+html {
+	scrollbar-face-color:#3b3828;
+	scrollbar-highlight-color:#5B5848;
+	scrollbar-3dlight-color:#5B5848;
+	scrollbar-darkshadow-color:#5B5848;
+	scrollbar-shadow-color:#5B5848;
+	scrollbar-arrow-color:#c3c2bb;
+	scrollbar-track-color:#696656;
+}
+
+a:link {
+	text-decoration: none;
+ 	color: #c3c2bb;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #c3c2bb;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.current {
+	font-weight: bold;
+	color: #c3c2bb;
+	background-color: #878477;
+}
+
+.cthumb {
+	background-color: #a09d90;
+	border: 1px;
+}
+
+.thumb {
+	background-color: #696656;
+	border: 1px;
+}
+
+.image { border: 1px solid #aaaaaa;}
+a:link .image {  border-color: #aaaaaa;}
+a:visited .image {  border-color: #aaaaaa;}
+a:hover .image { border-color: #ffffff;}
+
+.mthumb { border: 1px solid #aaaaaa;}
+a:link .mthumb {  border-color: #aaaaaa;}
+a:visited .mthumb {  border-color: #aaaaaa;}
+a:hover .mthumb { border-color: #ffffff;}
+
+.slideImage { border-width: 0px; border: 0px solid; border-color: #ffffff;}
+a:link .slideImage { border-color: #ffffff;}
+a:visited .slideImage { border-color: #ffffff;}
+
+.title {
+	font-size: 120%;
+	font-weight: bold;
+	color: #ADACA4;
+}
+
+.title a:link {
+	text-decoration: none;
+	color: #c3c2bb;
+}
+
+.title a:visited {
+	text-decoration: none;
+	color: #c3c2bb;
+}
+
+.title a:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.infotable {
+	border: 1px solid #827F71;
+	border-collapse: collapse;
+}
+
+.infotable td {
+	border: 1px solid #827F71;
+}
+
+.infotable table {
+	border-collapse: separate;
+}
+
+.infotable table td {
+	border: 0px;
+}
+
+.dirname {
+	font-size: 100%;
+	font-weight: bold;
+	color: #c3c2bb;
+}
+
+.comment {
+	color: #c3c2bb;
+	font-weight: bold;
+	font-size: 100%;
+}
+
+.smalltxt {
+	color: #a2a19a;
+	font-size: 90%;
+}
+
+.xsmalltxt {
+	color: #a2a19a;
+	font-size: 80%;
+}
+
+.newlabel {
+	font-size: 70%;
+	font-weight: bold;
+	color: #c3c2bb;
+	background-color: #878477;
+	border: 1px solid #666666;
+}

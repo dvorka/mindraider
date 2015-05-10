@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<resource>
+  <metadata>
+    <uri>http://dvorka/e-mentality/concept/MR_Documentation#Graph_Navigation</uri>
+    <author>dvorka</author>
+    <created>1107101908787</created>
+    <revision>25</revision>
+    <timestamp>1109677396288</timestamp>
+    <type>http://e-mental.com/mindraider/owl/class#Concept</type>
+    <mr>0.506</mr>
+  </metadata>
+  <data>
+    <notebookProperty>
+      <uri>http://dvorka/e-mentality/notebook#MR_Documentation</uri>
+    </notebookProperty>
+    <labelProperty>Graph Navigation</labelProperty>
+    <annotationProperty>Within Notebook you may also navigate using Graph Navigator. This pane allows you to browse Concepts of particular Notebook.
+
+In fact it is just another way of howto render underlaying RDF model that captures Concepts relationships. You may tune details of what you want to see...</annotationProperty>
+    <parentConceptUri>http://dvorka/e-mentality/notebook#MR_Documentation</parentConceptUri>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:attachments" label="Attachments" />
+  </data>
+</resource>

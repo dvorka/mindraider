@@ -1,0 +1,38 @@
+/*
+	CSS for OPML that has been converted to DIVs for
+	display in HTML.  joshuaa@netcrucible.com.
+*/
+
+.outline {
+	padding-top:3px;
+	position:relative;
+	left:1em;
+}
+
+.outlineRoot {
+	background:white;
+}
+
+.outlineText {
+	font-family:georgia;
+	cursor:default;
+}
+
+.markerOpen {
+	color:lightslategray;
+	padding-right:1ex;
+	font-size:smaller;
+	cursor:default;
+}
+
+.markerClosed {
+	color:black;
+	padding-right:1ex;
+	font-size:smaller;
+	cursor:default;
+}
+
+.outlineAttribute {
+	visibility:hidden;
+	display:none;
+}

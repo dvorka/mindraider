@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- saved from url=(0013)about:internet -->
+<meta http-equiv="Content-Type" content="text/html;charset=Cp1250" />
+<meta name="Keywords" content="photo,album,gallery,MindRaider Incubator,mr.0.screenshot1" />
+
+<meta http-equiv="Page-Enter" content="blendTrans(Duration=0.5)" />
+<meta http-equiv="Page-Exit" content="blendTrans(Duration=0.5)" />
+<title>Screenshots/MindRaider Incubator/mr.0.screenshot1</title>
+<script type="text/javascript" src="../../res/embedmovie.js"></script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+
+function keypress(e) {
+	if(!e) var e=window.event;
+	if(e.keyCode) keyCode=e.keyCode; 
+	else if(e.which) keyCode=e.which;
+	switch(keyCode) {
+		case 8: window.location="../index.html"; return false; break;
+		case 63235: case 39: window.location="mr.0.screenshot2.html"; return false; break;
+		case 63234: case 37: window.location="mr.0.screenshot0.html"; return false; break;
+		case 63273: case 36: window.location="mr.0.screenshot0.html"; return false; break;
+		case 63275: case 35: window.location="mr.1.notebookChoice.html"; return false; break;
+		case 32: show_down(); setTimeout('show_out()', 200); return false; break;
+	}
+	return true;
+}
+function keypresslistener() {
+  if(document.all) { document.onkeydown = keypress; }
+  else if(document.layers || document.getElementById) { document.onkeypress = keypress; }
+}
+idx0 = new Image(31,31); idx0.src = "../../res/idx.gif";
+idx1 = new Image(31,31); idx1.src = "../../res/idx1.gif";
+next0 = new Image(31,31);next0.src = "../../res/next.gif";
+next1 = new Image(31,31);next1.src = "../../res/next1.gif";
+prev0 = new Image(31,31);prev0.src = "../../res/prev.gif";
+prev1 = new Image(31,31);prev1.src = "../../res/prev1.gif";
+
+show0 = new Image(31,31);show0.src = "../../res/show.gif";
+show1 = new Image(31,31);show1.src = "../../res/show1.gif";
+stop0 = new Image(31,31);stop0.src = "../../res/stop.gif";
+stop1 = new Image(31,31);stop1.src = "../../res/stop1.gif";
+
+var show_param = -1;
+if (window.location.search.length > 1) {
+	var parms = window.location.search.substring(1,location.search.length).split("&");
+	for (var i = 0; i < parms.length; i++) {		
+		if(parms[i].substring(0, parms[i].indexOf("=")) == "show_param") 
+			delay = show_param = parms[i].substring(parms[i].indexOf("=") + 1, parms[i].length);
+	}
+}
+var show_delay = show_param;
+function show_timer() {
+	if (show_delay >= 0) {
+		show_delay--;
+		if (show_delay < 0 && show_param > 0) {
+			window.location="mr.0.screenshot2.html?show_param=" + show_param;
+		}
+		else if(show_param > 0) 
+			window.status='Time left: '+(show_delay + 1)+' s';
+	}
+	setTimeout('show_timer()', 1000);	
+}
+function show_over() {
+	document.getElementById("show").src = (show_param >= 0)? stop1.src : show1.src;
+	window.status = 'Start/Stop slideshow - Double-Click to change speed';
+}
+function show_out() {
+	document.getElementById("show").src = (show_param >= 0)? stop0.src : show0.src;
+}
+function show_down() {
+	el = document.getElementById("show");
+	if (show_param >= 0) { 
+		show_param = -1; 
+		el.src = stop1.src; 
+		window.status=''; 
+	} 
+	else { 
+		show_param = 3; 
+		el.src = show1.src; 
+	} 
+	show_delay = show_param; 
+}
+function change_delay() {
+	delay = prompt('delay', (show_param < 0)? 3 : show_param);
+	show_param = show_delay = delay; 
+	document.getElementById("show").src = show1.src;
+}
+
+
+function generatenew(fDays) {
+  now = new Date();
+  nDays = now / 86400000;
+  if((nDays - fDays) <= 14)
+    document.write('<span class="newlabel">&nbsp;NEW&nbsp;<\/span>&nbsp;');
+}
+
+
+
+/* ]]> */
+</script>
+
+
+
+<link rel="stylesheet" type="text/css" href="../../res/styles.css" />
+
+<style type="text/css">
+body { background-image: url(../../res/bg.gif); background-repeat: repeat-x; }
+</style>
+</head>
+
+<body id="body" onload="show_timer(); show_out(); keypresslistener();">
+<div style="width:99%; margin-left:auto; margin-right:auto; margin-bottom: 10px; text-align:center;">
+<table style="height:54px;" align="center" cellspacing="0" cellpadding="0" border="0">
+<tr><td>
+<!-- Header of slide pages -->
+<table style="width:720px;" align="center" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td style="width:31px;">
+  <a href="../index.html"><img style="border:0;" src="../../res/idx.gif" onmouseover="this.src=idx1.src" onmouseout="this.src=idx0.src" width="31" height="31" title=" Index page " alt="Up" id="idx" /></a></td>
+<td style="width:20px;">
+  <img style="border:0;" src="../../res/hdr_left.gif" width="20" height="31" alt="" /></td>
+<td style="text-align:left; background:transparent url(../../res/hdr_mid.gif); background-repeat: repeat-x; white-space:nowrap;" class="title"> <a href="../../index.html">Screenshots</a> &raquo; <a href="../index.html">MindRaider Incubator</a> </td>
+<td style="width:20px;">
+  <img style="border:0;" src="../../res/hdr_right.gif" width="20" height="31" alt="" /></td>
+<td style="width:31px;">
+  <a href="mr.0.screenshot0.html"><img style="border:0;" src="../../res/prev.gif" onmouseover="this.src=prev1.src" onmouseout="this.src=prev0.src" width="31" height="31" title=" Previous image " alt="Prev" id="prev" /></a></td>
+<td style="width:31px;">
+  <a href="mr.0.screenshot2.html"><img style="border:0;" src="../../res/next.gif" onmouseover="this.src=next1.src" onmouseout="this.src=next0.src" width="31" height="31" title=" Next image " alt="Next" id="next" /></a></td>
+
+<td style="width:31px;">
+  <a href="javascript:void(0)"><img style="border:0;" src="../../res/show.gif" onmouseover="show_over();" onmouseout="show_out();" onmousedown="show_down();" ondblclick="change_delay();" width="31" height="31" title=" Start/Stop slideshow - Double-Click to change speed " alt="Slideshow" id="show" /></a></td>
+</tr></table>
+</td></tr></table>
+<br />
+
+<table style="width:720px;" align="center" class="infotable" cellspacing="0" cellpadding="2">
+  <tr>
+  
+  <td style="text-align:center;" class="smalltxt"><script type="text/javascript">generatenew(12460);</script>&nbsp;</td>
+  
+  
+</tr>
+  <tr><td style="text-align:center;" class="smalltxt">Image |<a href="mr.0.screenshot0.html"> 1 </a>|<span class="current">&nbsp;2&nbsp;</span>|<a href="mr.0.screenshot2.html"> 3 </a>|<a href="mr.1.channels.html"> 4 </a>|<a href="mr.1.searchModel.html"> 5 </a>|<a href="mr.1.launch.html"> 6 </a>|<a href="mr.1.rdfEdit.html"> 7 </a>|<a href="mr.1.modelExport.html"> 8 </a>|<a href="mr.1.notebookChoice.html"> 9 </a>|</td></tr>
+  
+  
+</table><br />
+<map name="imagemap" style="text-decoration:none; border:0;" id="imap"><area coords="0,0,240,538" href="mr.0.screenshot0.html" alt=" Previous image " title=" Previous image " /><area coords="480,0,720,538" href="mr.0.screenshot2.html" alt=" Next image " title=" Next image " /><area coords="240,0,480,538" href="../index.html" alt=" Index page " title=" Index page " /></map>
+<table align="center" border="0" cellspacing="0" cellpadding="0"><tr>
+
+<td style="text-align:center; width:720px;">
+<img id="slide" src="mr.0.screenshot1.jpg" class="slideImage" width="720" height="538" alt="mr.0.screenshot1.png" title=" Downsized Image [mr.0.screenshot1.png - 159kB] " usemap="#imagemap" /></td>
+</tr></table>
+<br /> <!-- Comment and image data at BOTTOM -->
+<table align="center" style="width:720px;" class="infotable" cellspacing="0" cellpadding="2">
+
+  
+  <tr><td style="text-align:center; white-space:nowrap;"><table align="center" style="height:60px;"><tr><td width="52" align="center" style="padding:4px; border:0px;">&nbsp;</td><td width="52" align="center" style="padding:4px; border:0px;">&nbsp;</td><td width="52" align="center" style="padding:4px; border:0px;">&nbsp;</td><td width="52" align="center" style="padding:4px; border:0px;">&nbsp;</td><td width="52" align="center" style="padding:4px; border:0px;" class="thumb"><a href="mr.0.screenshot0.html"><img src="../thumbs/mr.0.screenshot0.jpg" title=" mr.0.screenshot0 " alt="mr.0.screenshot0" width="48" height="36" class="mthumb" /></a></td><td width="52" align="center" style="padding:4px; border:0px;" class="cthumb"><img src="../thumbs/mr.0.screenshot1.jpg" title=" mr.0.screenshot1 " alt="mr.0.screenshot1" width="48" height="35" class="mthumb" /></td><td width="52" align="center" style="padding:4px; border:0px;" class="thumb"><a href="mr.0.screenshot2.html"><img src="../thumbs/mr.0.screenshot2.jpg" title=" mr.0.screenshot2 " alt="mr.0.screenshot2" width="48" height="35" class="mthumb" /></a></td><td width="52" align="center" style="padding:4px; border:0px;" class="thumb"><a href="mr.1.channels.html"><img src="../thumbs/mr.1.channels.jpg" title=" mr.1.channels " alt="mr.1.channels" width="48" height="36" class="mthumb" /></a></td><td width="52" align="center" style="padding:4px; border:0px;" class="thumb"><a href="mr.1.searchModel.html"><img src="../thumbs/mr.1.searchModel.jpg" title=" mr.1.searchModel " alt="mr.1.searchModel" width="48" height="36" class="mthumb" /></a></td><td width="52" align="center" style="padding:4px; border:0px;" class="thumb"><a href="mr.1.launch.html"><img src="../thumbs/mr.1.launch.jpg" title=" mr.1.launch " alt="mr.1.launch" width="48" height="36" class="mthumb" /></a></td><td width="52" align="center" style="padding:4px; border:0px;" class="thumb"><a href="mr.1.rdfEdit.html"><img src="../thumbs/mr.1.rdfEdit.jpg" title=" mr.1.rdfEdit " alt="mr.1.rdfEdit" width="48" height="36" class="mthumb" /></a></td></tr></table></td></tr>
+  
+  
+  
+  <tr><td style="text-align:center;" class="xsmalltxt"><b>&lt;-/-&gt;</b> Previous image / Next image | <b>Backspace</b> Index page | <b>Home</b> First Image | <b>End</b> Last Image | <b>Space</b> Start/Stop slideshow</td></tr>
+  <tr><td style="text-align:center;" class="xsmalltxt">Total images: <strong>9</strong> | <a href="javascript:void(0)" onclick="window.open('http://mindraider.sourceforge.net')">mindraider.sourceforge.net</a> | <a href="javascript:void(0)" onclick="window.open('http://www.mindcognition.com')">Mind and Cognition</a></td></tr>
+</table>
+
+
+</div>
+
+<script language="javascript" type="text/javascript">
+next_image=new Image(); next_image.src="mr.0.screenshot2.jpg";
+</script>
+<script language="javascript" type="text/javascript">
+previous_image=new Image(); previous_image.src="mr.0.screenshot0.jpg";
+</script>
+</body>
+</html>

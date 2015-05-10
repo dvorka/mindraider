@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!--
+ ===========================================================================
+   Copyright 2002-2010 Martin Dvorak
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+ ===========================================================================
+-->
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:util="http://www.springframework.org/schema/util" 
+       xmlns:jee="http://www.springframework.org/schema/jee" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.0.xsd">
+
+  <!-- 
+  		Spring concext is loaded by:
+  		
+  			 OutlineJPanel 
+  			 
+  	    later will be the context spread to other parts of the program. 
+    -->
+
+  <!--
+        Configuration 
+    -->
+
+  <!-- 
+  		UI: Concept Panel
+  		-->
+  <bean id="conceptPanel" class="com.mindcognition.mindraider.ui.swing.concept.ConceptJPanel" init-method="init">
+   	<property name="annotationsCustodian">
+   		<ref bean="conceptAnnotationsCustodian"/>
+   	</property>
+   	<property name="attachmentsJPanel">
+   		<ref bean="conceptAttachments"/>
+   	</property>
+  </bean>
+  	    
+  <!-- 
+  		concept annotations
+    	-->
+
+  <bean id="plainTextAnnotationRenderer" class="com.mindcognition.mindraider.ui.swing.concept.annotation.renderer.PlainTextAnnotationRenderer" init-method="init"> 
+   	<property name="conceptPanel">
+   		<ref bean="conceptPanel"/>
+   	</property>
+   	<property name="attachmentsJPanel">
+   		<ref bean="conceptAttachments"/>
+   	</property>
+  </bean>
+  <bean id="twikiAnnotation" class="com.mindcognition.mindraider.ui.swing.concept.annotation.renderer.TWikiAnnotationRenderer" init-method="init"> 
+   	<property name="conceptPanel">
+   		<ref bean="conceptPanel"/>
+   	</property>
+   	<property name="attachmentsJPanel">
+   		<ref bean="conceptAttachments"/>
+   	</property>
+  </bean>
+  <bean id="htmlAnnotation" class="com.mindcognition.mindraider.ui.swing.concept.annotation.renderer.HtmlAnnotationRenderer" init-method="init"> 
+   	<property name="conceptPanel">
+   		<ref bean="conceptPanel"/>
+   	</property>
+   	<property name="attachmentsJPanel">
+   		<ref bean="conceptAttachments"/>
+   	</property>
+  </bean>
+  <bean id="richTextAnnotation" class="com.mindcognition.mindraider.ui.swing.concept.annotation.renderer.RichTextAnnotationRenderer" init-method="init"> 
+   	<property name="conceptPanel">
+   		<ref bean="conceptPanel"/>
+   	</property>
+   	<property name="attachmentsJPanel">
+   		<ref bean="conceptAttachments"/>
+   	</property>
+  </bean>
+  <bean id="sketchAnnotation" class="com.mindcognition.mindraider.ui.swing.concept.annotation.renderer.SketchAnnotationRenderer" init-method="init"> 
+   	<property name="conceptPanel">
+   		<ref bean="conceptPanel"/>
+   	</property>
+   	<property name="attachmentsJPanel">
+   		<ref bean="conceptAttachments"/>
+   	</property>
+  </bean>
+ 
+  <!-- 
+  		note annotations custodian
+      -->
+
+  <bean id="conceptAnnotationsCustodian" class="com.mindcognition.mindraider.ui.swing.concept.annotation.ConceptAnnotationsCustodian"> 
+  	<property name="annotationRenderers">
+    	<list>
+       		<ref bean="richTextAnnotation"/>
+       		<ref bean="plainTextAnnotationRenderer"/>
+       		<ref bean="twikiAnnotation"/>
+       		<ref bean="htmlAnnotation"/>
+       		<ref bean="sketchAnnotation"/>
+        </list>
+  	</property>
+  </bean>
+ 
+  <bean id="conceptAttachments" class="com.emental.mindraider.ui.panels.ConceptAttachmentsJPanel" init-method="init">
+   	<property name="conceptJPanel">
+   		<ref bean="conceptPanel"/>
+   	</property>
+  </bean>
+ 
+</beans>

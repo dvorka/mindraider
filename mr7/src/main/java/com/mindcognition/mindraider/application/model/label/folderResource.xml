@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<resource>
+	<metadata>
+		<uri>com:e-mental:mindraider:examples:mySampleFolder</uri>
+		<author>dvorka</author>
+		<created>5347827498534</created>
+		<revision>3</revision>
+		<timestamp>573498378957934</timestamp>
+	</metadata>
+
+	<data>
+		<labelProperty>My Sample Folder</labelProperty>
+		<annotationProperty>
+			Resource used to test folder parsing.
+		</annotationProperty>
+		<propertyGroup uri="com:e-mental:mindraider:categories"
+			label="Categories">
+			<category>
+				<taxonomy>
+					com:e-mental:mindraider:taxonomies:resourceTypes
+				</taxonomy>
+				<name>Folder</name>
+				<value>resources:folder</value>
+			</category>
+		</propertyGroup>
+
+		<!-- as for every resource, properties refer just to URIs,
+			location of other resources (like notebooks) is captured 
+			by the associated RDF model -->
+		<propertyGroup uri="com:e-mental:mindraider:folder:notebooks"
+			label="Asociated notebooks">
+			<notebookProperty>
+				<uri>com:some:uri</uri>
+			</notebookProperty>
+		</propertyGroup>
+	</data>
+</resource>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rss="http://purl.org/rss/1.0/"
+    xmlns:jms="http://jena.hpl.hp.com/2003/08/jms#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/" >
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/class#MindMap">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://e-mental.com/mindraider/owl/class#MrResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/class#Attachment">
+    <rdfs:subClassOf rdf:resource="http://e-mental.com/mindraider/owl/class#MindMap"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/class#MrAttachment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://e-mental.com/mindraider/owl/class#Attachment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/property#isDiscarded">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/class#MrResource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/class#Folder">
+    <rdfs:subClassOf rdf:resource="http://e-mental.com/mindraider/owl/class#MindMap"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/class#Notebook">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://e-mental.com/mindraider/owl/class#MindMap"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/class#Concept">
+    <rdfs:subClassOf rdf:resource="http://e-mental.com/mindraider/owl/class#MindMap"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/class#WebAttachment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://e-mental.com/mindraider/owl/class#Attachment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/property#hasAttachment">
+    <rdfs:range rdf:resource="http://e-mental.com/mindraider/owl/class#Attachment"/>
+    <rdfs:domain rdf:resource="http://e-mental.com/mindraider/owl/class#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/class#LocalAttachment">
+    <rdfs:subClassOf rdf:resource="http://e-mental.com/mindraider/owl/class#Attachment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

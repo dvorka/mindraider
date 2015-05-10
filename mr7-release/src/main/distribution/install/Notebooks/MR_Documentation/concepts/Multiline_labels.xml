@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<resource>
+  <metadata>
+    <uri>http://dvorka/e-mentality/concept/MR_Documentation#Multiline_labels</uri>
+    <author>dvorka</author>
+    <created>1107102126350</created>
+    <revision>11</revision>
+    <timestamp>1109677332025</timestamp>
+    <type>http://e-mental.com/mindraider/owl/class#Concept</type>
+    <mr>0.506</mr>
+  </metadata>
+  <data>
+    <notebookProperty>
+      <uri>http://dvorka/e-mentality/notebook#MR_Documentation</uri>
+    </notebookProperty>
+    <labelProperty>Multiline labels</labelProperty>
+    <annotationProperty>Allow wrapping of lines for long literals. This option is enabled by default.</annotationProperty>
+    <parentConceptUri>http://dvorka/e-mentality/concept/MR_Documentation#Graph_Navigation</parentConceptUri>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:attachments" label="Attachments" />
+  </data>
+</resource>

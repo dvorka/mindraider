@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<resource>
+  <metadata>
+    <uri>http://savant/e-mentality/concept/Introduction#Preface</uri>
+    <author>dvorka</author>
+    <created>1107102483133</created>
+    <revision>9</revision>
+    <timestamp>1109675829675</timestamp>
+    <type>http://e-mental.com/mindraider/owl/class#Concept</type>
+    <mr>0.506</mr>
+  </metadata>
+  <data>
+    <notebookProperty>
+      <uri>http://savant/e-mentality/notebook#Introduction</uri>
+    </notebookProperty>
+    <labelProperty>Preface</labelProperty>
+    <annotationProperty>Welcome to MindRaider!
+</annotationProperty>
+    <parentConceptUri>http://savant/e-mentality/notebook#Introduction</parentConceptUri>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:attachments" label="Attachments" />
+  </data>
+</resource>

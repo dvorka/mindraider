@@ -1,0 +1,1 @@
+javaw -Xmx256m -Dlog4j.configuration.debug=./conf/log4j.properties -Dlog4j.configuration=./conf/distribution.log4j.properties -jar run.jar

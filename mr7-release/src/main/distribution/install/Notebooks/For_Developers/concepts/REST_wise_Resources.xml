@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<resource>
+  <metadata>
+    <uri>http://savant/e-mentality/concept/For_Developers#REST_wise_Resources</uri>
+    <author>dvorka</author>
+    <created>1107112762139</created>
+    <revision>27</revision>
+    <timestamp>1109678575293</timestamp>
+    <type>http://e-mental.com/mindraider/owl/class#Concept</type>
+    <mr>0.506</mr>
+  </metadata>
+  <data>
+    <notebookProperty>
+      <uri>http://savant/e-mentality/notebook#For_Developers</uri>
+    </notebookProperty>
+    <labelProperty>REST-wise Resources</labelProperty>
+    <annotationProperty>Data model follows REST rules in terms of URIs, resource design, and their representations. 
+In the future, this architecture will enables me to create cool API allowing MindRaider users to share their cognitive bases in P2P manner.
+
+(Vodyanoi)</annotationProperty>
+    <parentConceptUri></parentConceptUri>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:attachments" label="Attachments" />
+  </data>
+</resource>

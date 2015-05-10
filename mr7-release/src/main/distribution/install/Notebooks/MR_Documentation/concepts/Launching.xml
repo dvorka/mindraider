@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<resource>
+  <metadata>
+    <uri>http://dvorka/e-mentality/concept/MR_Documentation#Launching</uri>
+    <author>dvorka</author>
+    <created>1107644408842</created>
+    <revision>17</revision>
+    <timestamp>1109677163303</timestamp>
+    <type>http://e-mental.com/mindraider/owl/class#Concept</type>
+    <mr>0.506</mr>
+  </metadata>
+  <data>
+    <notebookProperty>
+      <uri>http://dvorka/e-mentality/notebook#MR_Documentation</uri>
+    </notebookProperty>
+    <labelProperty>Launching</labelProperty>
+    <annotationProperty>You may specify which program should be used for launching of web/local resources by chooseing MindRaider/Preferences... from menu.
+
+By mouse double-click you may launch nodes in the *Graph navigator* (launcheable nodes are marked with _"rocket"_)</annotationProperty>
+    <parentConceptUri>http://dvorka/e-mentality/concept/MR_Documentation#Attachments</parentConceptUri>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:attachments" label="Attachments" />
+  </data>
+</resource>

@@ -1,0 +1,17 @@
+Description:
+ o Achievement description. The goal must be set up first - mainly measurability of
+   whether it was achieved. Describe it from all the aspects.
+
+SMART
+ S
+ Measurable
+ A
+ R
+ Time
+
+Questions:
+ o What is the goal? Describe it briefly.
+ o What form the goal have? Is it some document? Is it a skill?
+ o If there is any deliverable, who is the target audience?
+ o How will you know that you have achieved that goal?
+ o Imagine ideal situation when the goal is achieved and describe it in detail.

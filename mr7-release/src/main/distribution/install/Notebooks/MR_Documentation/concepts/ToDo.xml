@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<resource>
+  <metadata>
+    <uri>http://dvorka/e-mentality/concept/MR_Documentation#ToDo</uri>
+    <author>dvorka</author>
+    <created>1110135569754</created>
+    <revision>10</revision>
+    <timestamp>1110135649879</timestamp>
+    <type>http://e-mental.com/mindraider/owl/class#Concept</type>
+    <mr>0.507</mr>
+  </metadata>
+  <data>
+    <notebookProperty>
+      <uri>http://dvorka/e-mentality/notebook#MR_Documentation</uri>
+    </notebookProperty>
+    <labelProperty>ToDo</labelProperty>
+    <annotationProperty>ToDo concept.</annotationProperty>
+    <parentConceptUri></parentConceptUri>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:categories" label="Categories">
+      <category>
+        <caption>Todo</caption>
+        <value>http://e-mental.com/mindraider/owl/flag#ToDo</value>
+      </category>
+    </propertyGroup>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:attachments" label="Attachments" />
+  </data>
+</resource>

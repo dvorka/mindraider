@@ -1,0 +1,214 @@
+/* MaindRaider; mindraider@users.sourceforge.net */
+
+a,p,body,ul,li,h2,h3,td,th {
+        font-size: 13px;
+        /* line-height: 17px; */
+        font-family: georgia, verdana, arial, sans-serif;
+}
+
+a,p,body,ul,li,td,th {
+        color: #ffffff;
+        font-weight: normal;
+}
+
+h1 {
+	margin: 0px;
+}
+
+h2 {
+        color: #ffffff;
+        font-weight: bold;
+        margin-top: 25px; 
+        margin-left: 5px;
+        margin-right: 5px;
+
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-color: #000000;
+}
+
+hr {
+        border: 0px none;
+        border-top: 1px dotted #D48B00;
+        color: #FFBD40
+}
+img {
+        border: 0px none;
+}
+
+li {     
+        list-style-position: outside;
+        list-style-type: disc;
+        margin: 0px
+}
+
+body {
+ 	color: #ffffff;
+        background-color: #000000;
+
+	scrollbar-3d-light-color : #333333;
+	scrollbar-arrow-color : #ffffff;
+	scrollbar-base-color : #666666;
+	scrollbar-dark-shadow-color : #333333;
+	scrollbar-face-color : #000000;
+	scrollbar-highlight-color : #222222;
+	scrollbar-shadow-color : #333333;
+	scrollbar-track-color : #666666;
+}
+
+a {
+    text-decoration: none;
+    color: #C6E2FF;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #C6E2FF;
+}
+
+a:active,
+a:hover {
+    text-decoration: underline;
+    color: #C6E2FF;
+}
+
+
+
+.option1 {
+        background-color: #cccccc
+}
+.option2 {
+        background-color: #dddddd
+}
+.option3 {
+        background-color: #eeeeee
+}
+.option4 {
+        background-color: #ffffff
+}
+
+
+.superTitle {
+        font-size: 90px;
+        vertical-align: middle;
+}
+
+.mrBlue {
+        color: #0b479b;
+}
+
+.leftSidebar {
+        background-color: #333333;
+
+        border-color: #222222;
+        border-width: 1px; 
+        border-style: solid;
+}
+
+.siteMenu {
+        background-color: #000; 
+        font-weight: bold;
+}
+
+.leftSidebarContent {
+        background-color: #555555;
+        margin: 5px;
+
+        border-color: #000000;
+        border-width: 1px; 
+        border-style: solid;
+}
+
+.sideTitle {
+        color: #ffffff;
+        font-weight: bold;
+        margin-top: 5px; 
+        margin-left: 5px;
+        margin-right: 5px;
+
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-color: #000000;
+}
+
+.sideEntry {
+        margin-right: 5px;
+}
+
+/* ### Main pane ### */
+
+.mainPane {
+        background-color: #333333;
+
+        border-color: #222222;
+        border-width: 1px; 
+        border-style: solid;
+}
+
+.mainPaneContent {
+        background-color: #555555;
+        margin: 5px;
+
+        border-color: #000000;
+        border-width: 1px; 
+        border-style: solid;
+}
+
+.mainTitle {
+        background-color: #000000; 
+        font-weight: bold;
+        font-size: large;
+}
+
+h1 {
+        background-color: #000000; 
+        font-weight: bold;
+        font-size: large;
+}
+
+.mainPaneText {
+        margin: 10px;
+}
+
+.introQuote {
+        margin: 20px;
+        font-style: italic;
+}
+
+blockquote {
+        font-style: italic;
+}
+
+.motto {
+        font-style: italic;
+}
+
+li {
+        list-style-type: upper-roman;
+        margin: 5px;
+}
+
+.testi {
+        margin-left: 20px;
+        margin-top: 20px;
+        font-style: italic;
+}
+.testiAuthor {
+        margin-left: 20px;
+        font-weight: bold;
+}
+
+.new {
+ 	color: #F0F0FF;
+        font-size: small;
+}
+
+.codename {
+        font-style: italic;
+        border-bottom: 1px dotted white;
+}
+
+.par {
+        margin-left: 5px;
+}

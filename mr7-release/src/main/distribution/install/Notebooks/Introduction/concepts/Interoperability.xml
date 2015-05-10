@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<resource>
+  <metadata>
+    <uri>http://dvorka/e-mentality/concept/Introduction#Interoperability</uri>
+    <author>dvorka</author>
+    <created>1109676175292</created>
+    <revision>4</revision>
+    <timestamp>1109677152146</timestamp>
+    <type>http://e-mental.com/mindraider/owl/class#Concept</type>
+    <mr>0.506</mr>
+  </metadata>
+  <data>
+    <notebookProperty>
+      <uri>http://savant/e-mentality/notebook#Introduction</uri>
+    </notebookProperty>
+    <labelProperty>Interoperability</labelProperty>
+    <annotationProperty>Mind maps created in MindRaider can be exported to: 
+ o OPML 
+ o TWiki 
+and imported from: 
+ o TWiki
+</annotationProperty>
+    <parentConceptUri>http://savant/e-mentality/concept/Introduction#Features</parentConceptUri>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:attachments" label="Attachments" />
+  </data>
+</resource>

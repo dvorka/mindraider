@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rdf:RDF
+    xmlns:j.0="http://e-mental.com/mindraider/owl/class#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.1="http://www.w3.org/1999/xlink#" >
+  <rdf:Description rdf:about="http://savant/e-mentality/notebook#For_Developers">
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Notebook"/>
+    <rdfs:label>For Developers</rdfs:label>
+    <j.1:href>Notebooks\For_Developers\notebook.xml</j.1:href>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/folder#notebookTrash">
+    <j.1:href>Folders\notebookTrash\folder.xml</j.1:href>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Folder"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdfs:label>Notebook Trash</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://savant/e-mentality/folder#MR">
+    <rdf:_2 rdf:resource="http://savant/e-mentality/notebook#MR_Documentation"/>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Folder"/>
+    <rdfs:label>MR</rdfs:label>
+    <j.1:href>Folders\MR\folder.xml</j.1:href>
+    <rdf:_3 rdf:resource="http://savant/e-mentality/notebook#For_Developers"/>
+    <rdf:_1 rdf:resource="http://savant/e-mentality/notebook#Introduction"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dvorka/e-mentality/mindmap#dvorka">
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#MindMap"/>
+    <rdf:_1 rdf:resource="http://dvorka/e-mentality/folder#notebookTrash"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+    <rdf:_2 rdf:resource="http://savant/e-mentality/folder#MR"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://savant/e-mentality/notebook#Introduction">
+    <rdfs:label>Introduction</rdfs:label>
+    <j.1:href>Notebooks\Introduction\notebook.xml</j.1:href>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Notebook"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://savant/e-mentality/notebook#MR_Documentation">
+    <rdfs:label>MR Documentation</rdfs:label>
+    <rdf:type rdf:resource="http://e-mental.com/mindraider/owl/class#Notebook"/>
+    <j.1:href>Notebooks\MR_Documentation\notebook.xml</j.1:href>
+  </rdf:Description>
+</rdf:RDF>

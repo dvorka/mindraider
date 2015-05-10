@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<resource>
+  <metadata>
+    <uri>http://dvorka/e-mentality/concept/MR_Documentation#Launching_</uri>
+    <author>dvorka</author>
+    <created>1107644482598</created>
+    <revision>8</revision>
+    <timestamp>1109677537040</timestamp>
+    <type>http://e-mental.com/mindraider/owl/class#Concept</type>
+    <mr>0.506</mr>
+  </metadata>
+  <data>
+    <notebookProperty>
+      <uri>http://dvorka/e-mentality/notebook#MR_Documentation</uri>
+    </notebookProperty>
+    <labelProperty>Launching</labelProperty>
+    <annotationProperty>You may open node/literal URLs by double-clicking a node in graph. All launchable nodes are marked with "rocket" icon.</annotationProperty>
+    <parentConceptUri>http://dvorka/e-mentality/concept/MR_Documentation#Graph_Navigation</parentConceptUri>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:attachments" label="Attachments" />
+  </data>
+</resource>

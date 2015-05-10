@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="WINDOWS-1250"?>
+<rdf:RDF
+    xmlns:rss="http://purl.org/rss/1.0/"
+    xmlns:jms="http://jena.hpl.hp.com/2003/08/jms#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/" >
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/flag#flag">
+    <rdfs:range rdf:resource="http://e-mental.com/mindraider/owl/flag#Flag"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/flag#Flag">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/flag#ToDo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://e-mental.com/mindraider/owl/flag#Flag"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/flag#Cool">
+    <rdfs:subClassOf rdf:resource="http://e-mental.com/mindraider/owl/flag#Flag"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/flag#Obsolete">
+    <rdfs:subClassOf rdf:resource="http://e-mental.com/mindraider/owl/flag#Flag"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/flag#Later">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://e-mental.com/mindraider/owl/flag#Flag"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/flag#Important">
+    <rdfs:subClassOf rdf:resource="http://e-mental.com/mindraider/owl/flag#Flag"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://e-mental.com/mindraider/owl/flag#Personal">
+    <rdfs:subClassOf rdf:resource="http://e-mental.com/mindraider/owl/flag#Flag"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

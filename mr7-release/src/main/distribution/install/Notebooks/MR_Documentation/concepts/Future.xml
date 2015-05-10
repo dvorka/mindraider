@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<resource>
+  <metadata>
+    <uri>http://dvorka/e-mentality/concept/MR_Documentation#Future</uri>
+    <author>dvorka</author>
+    <created>1107102373806</created>
+    <revision>61</revision>
+    <timestamp>1109678463662</timestamp>
+    <type>http://e-mental.com/mindraider/owl/class#Concept</type>
+    <mr>0.506</mr>
+  </metadata>
+  <data>
+    <notebookProperty>
+      <uri>http://dvorka/e-mentality/notebook#MR_Documentation</uri>
+    </notebookProperty>
+    <labelProperty>Future</labelProperty>
+    <annotationProperty>MindRaider is in fact foundation of an ambitious project called e-mentality...
+
+e-mentality is my spare time project since my college studies (late 90's). At the beginning there were just vague ideas. Since that time I had written tons of analyses and I created multiple prototypes. Lately I determined that I finally know how e-mentality should look like :-) - how it fits SW and its ontologies, annotations, inference engines and agents... so I decided to release an alpha of its building block - MindRaider.
+
+Note that MindRaider is just the first step on the long way towards the full featured Semantic Web user agent (as I see it). Check MR blog for Vodyanoi (which should be MindRaider successor) and various thoughts on outliner/mind mapping topic.
+</annotationProperty>
+    <parentConceptUri>http://dvorka/e-mentality/notebook#MR_Documentation</parentConceptUri>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:attachments" label="Attachments">
+      <attachmentProperty>
+        <description>http://e-mentality.blogspot.com/</description>
+        <url>http://e-mentality.blogspot.com/</url>
+      </attachmentProperty>
+    </propertyGroup>
+  </data>
+</resource>

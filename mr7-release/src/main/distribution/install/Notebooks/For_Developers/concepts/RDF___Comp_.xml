@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<resource>
+  <metadata>
+    <uri>http://savant/e-mentality/concept/For_Developers#RDF___Comp_</uri>
+    <author>dvorka</author>
+    <created>1107112792913</created>
+    <revision>22</revision>
+    <timestamp>1109678734802</timestamp>
+    <type>http://e-mental.com/mindraider/owl/class#Concept</type>
+    <mr>0.506</mr>
+  </metadata>
+  <data>
+    <notebookProperty>
+      <uri>http://savant/e-mentality/notebook#For_Developers</uri>
+    </notebookProperty>
+    <labelProperty>RDF &amp; Comp.</labelProperty>
+    <annotationProperty>REST-wise resources are described by the metadata level represented in RDF. 
+
+MR internals are ready to enable categorization using (OWL) ontologies which will in turn enable creation of various Notebook's facets.</annotationProperty>
+    <parentConceptUri></parentConceptUri>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:attachments" label="Attachments" />
+  </data>
+</resource>

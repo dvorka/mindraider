@@ -1,0 +1,8 @@
+Description:
+ Focus on the way how the goal can be achieved. Enumerate several paths and choose the best.
+
+Questions:
+ o What are the options of how can be the goal achieved?
+ o Can you enumerate several paths to goal and choose the one?
+ o Could be paths somehow combined?
+ o Would it be suitable to set up milestones?

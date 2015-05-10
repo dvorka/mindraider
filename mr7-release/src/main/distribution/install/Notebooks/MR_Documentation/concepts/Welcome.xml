@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<resource>
+  <metadata>
+    <uri>http://dvorka/e-mentality/concept/MR_Documentation#Welcome</uri>
+    <author>dvorka</author>
+    <created>1107101136296</created>
+    <revision>30</revision>
+    <timestamp>1109677293139</timestamp>
+    <type>http://e-mental.com/mindraider/owl/class#Concept</type>
+    <mr>0.506</mr>
+  </metadata>
+  <data>
+    <notebookProperty>
+      <uri>http://dvorka/e-mentality/notebook#MR_Documentation</uri>
+    </notebookProperty>
+    <labelProperty>Welcome</labelProperty>
+    <annotationProperty>This notebook aims to give you a short overview of the MindRaider features.
+
+IMPORTANT: please note that this is the alpha release of MR, therefore features, data formats, etc. are subject of change. I would appreciate any feedback, criticism or bug report. Check attachments section for project homepage and blog.
+
+Also do not forget to tune proper music :-)
+
+(this notebook applies to MR 0.506)</annotationProperty>
+    <parentConceptUri></parentConceptUri>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:attachments" label="Attachments">
+      <attachmentProperty>
+        <description>http://e-mentality.blogspot.com/</description>
+        <url>http://e-mentality.blogspot.com/</url>
+      </attachmentProperty>
+      <attachmentProperty>
+        <description>http://www.bbc.co.uk/radio1/urban/tracklistings/fabgroove/fabio_grooverider_tracklistings_live.shtml</description>
+        <url>http://www.bbc.co.uk/radio1/urban/tracklistings/fabgroove/fabio_grooverider_tracklistings_live.shtml</url>
+      </attachmentProperty>
+      <attachmentProperty>
+        <description>http://mindraider.sourceforge.net/</description>
+        <url>http://mindraider.sourceforge.net/</url>
+      </attachmentProperty>
+    </propertyGroup>
+  </data>
+</resource>

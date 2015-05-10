@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<resource>
+  <metadata>
+    <uri>http://dvorka/e-mentality/concept/MR_Documentation#Later</uri>
+    <author>dvorka</author>
+    <created>1110135653725</created>
+    <revision>9</revision>
+    <timestamp>1110135693873</timestamp>
+    <type>http://e-mental.com/mindraider/owl/class#Concept</type>
+    <mr>0.507</mr>
+  </metadata>
+  <data>
+    <notebookProperty>
+      <uri>http://dvorka/e-mentality/notebook#MR_Documentation</uri>
+    </notebookProperty>
+    <labelProperty>Later</labelProperty>
+    <annotationProperty>"Do it later" concept.</annotationProperty>
+    <parentConceptUri>http://dvorka/e-mentality/concept/MR_Documentation#Personal</parentConceptUri>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:categories" label="Categories">
+      <category>
+        <caption>Later</caption>
+        <value>http://e-mental.com/mindraider/owl/flag#Later</value>
+      </category>
+    </propertyGroup>
+    <propertyGroup uri="com:e-mental:mindraider:folder:notebook:concept:attachments" label="Attachments" />
+  </data>
+</resource>
