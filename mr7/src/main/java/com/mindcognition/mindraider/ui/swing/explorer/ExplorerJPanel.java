@@ -127,8 +127,10 @@ public final class ExplorerJPanel extends JPanel {
         tagsNotebooksAndRecentSplit.setContinuousLayout(true);
         
         add(tagsNotebooksAndRecentSplit, BorderLayout.CENTER);
-        
-        validateTree();     
+     
+        synchronized(getTreeLock()) {
+            validateTree();
+       }        
     }
 
     public static ExplorerJPanel getInstance() {
