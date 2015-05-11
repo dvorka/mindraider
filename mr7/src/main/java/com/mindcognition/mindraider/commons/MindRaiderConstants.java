@@ -42,7 +42,7 @@ public interface MindRaiderConstants {
     /**
      * The major version identifies MR generations; incremented rarely.
      */
-    public static final int majorVersion = 9;
+    public static final int majorVersion = 15;
 
     /**
      * Minor version is incremented with every release.
