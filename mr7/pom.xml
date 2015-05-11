@@ -26,7 +26,7 @@
       <groupId>com.mindcognition.mindraider</groupId>
       <!-- MUST be snapshot in order to force .jar replacement in mvn's local repository -->
       <artifactId>mindraider7</artifactId>
-      <version>8.0</version>
+      <version>15.0</version>
   </parent>
 
   <artifactId>mr7-SNAPSHOT</artifactId>

@@ -25,7 +25,7 @@
     <parent>
         <groupId>com.mindcognition.mindraider</groupId>
         <artifactId>mindraider7</artifactId>
-        <version>8.0</version>
+        <version>15.0</version>
     </parent>
 
     <artifactId>mr7-release</artifactId>
@@ -48,7 +48,7 @@
                         <phase>package</phase>
                         <configuration>
                             <descriptor>src/assembly/windows-release.xml</descriptor>
-                            <finalName>mindraider-8.0</finalName>
+                            <finalName>mindraider-15.0</finalName>
                         </configuration>
                         <goals>
                             <goal>assembly</goal>
@@ -59,7 +59,7 @@
                         <phase>package</phase>
                         <configuration>
                             <descriptor>src/assembly/linux-release.xml</descriptor>
-                            <finalName>mindraider-8.0</finalName>
+                            <finalName>mindraider-15.0</finalName>
                         </configuration>
                         <goals>
                             <goal>assembly</goal>
@@ -70,7 +70,7 @@
                         <phase>package</phase>
                         <configuration>
                             <descriptor>src/assembly/allplatforms-release.xml</descriptor>
-                            <finalName>mindraider-8.0</finalName>
+                            <finalName>mindraider-15.0</finalName>
                         </configuration>
                         <goals>
                             <goal>assembly</goal>
@@ -86,7 +86,7 @@
         <dependency>
             <groupId>com.mindcognition.mindraider</groupId>
             <artifactId>mr7-SNAPSHOT</artifactId>
-            <version>8.0</version>
+            <version>15.0</version>
         </dependency>
     </dependencies>
 
