@@ -9,7 +9,7 @@ print STDOUT "+-------------------------------------------------------------+\n"
 print STDOUT "=-> Note that processed files must be mentioned within source code!";
 
 # 1 is Linux, 0 is Windows
-$linuxMode=0;
+$linuxMode=1;
 
 # encapsulation template
 $footTemplate="index.html";
@@ -59,7 +59,7 @@ print STDOUT "\nBye!";
 sub initFootScript {
   print STDOUT "\n=-> Cleaning core/ and prepost/ directories...\n";
   if($linuxMode) {
-    system("cd core; rm -vf *; cd ..; cd prepost; rm -vf *");
+    system("cd core && rm -vf * && cd ../prepost && rm -vf *");
   }
   else {
     if(chdir("core")) {
@@ -161,8 +161,14 @@ sub makeCore
 
         ($sourcator)=@_;
 
-        $destinator="core\\".$sourcator;
-        $sourcator="..\\".$sourcator;
+        if($linuxMode) {
+	    $destinator="core/".$sourcator;
+	    $sourcator="../".$sourcator;
+        } else {
+	    $destinator="core\\".$sourcator;
+	    $sourcator="..\\".$sourcator;
+        }
+
         print STDOUT " $sourcator =-> $destinator\n";
 
         # mode:
@@ -175,7 +181,7 @@ sub makeCore
 
         # put prefix
         if($linuxMode) {
-          system("cp prepost/prefix.html $destinator");
+          system("cp -vf prepost/prefix.html $destinator");
         }
         else {
           system("copy prepost\\prefix.html $destinator");
