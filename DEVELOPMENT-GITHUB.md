@@ -2,8 +2,8 @@ How to Build MindRaider Distribution
 -------------------------------------
 Prerequisities to build MR distribution:
 
-* JDK 1.7
-* Maven 3.1.x
+* JDK 1.8
+* Maven 3.5.x
 * Git
 
 Method:
@@ -48,7 +48,6 @@ mvn assembly:assembly
 mvn clean package
 
 mvn archetype:create -DarchetypeGroupId=org.apache.maven.archetypes -DgroupId=com.mindcognition.mindraider -DartifactId=mr7-
-
 ```
 
 
@@ -121,4 +120,23 @@ Maven settings
   <localRepository>/home/${YOUR USERNAME GOES HERE}/.m2/repository</localRepository>
 
 </settings>
+```
+
+
+
+How to move ~/MindForger between different machines
+---------------------------------------------------
+If you move MindForger repository to different machine and/or machine
+with different `hostname`, then MindRaider will not show anything.
+
+To fix repository, open ~/.mindraider.profile/<USERNAME>.xml and change hostname
+property to the hostname that was used on the origin host i.e.
+new machine hostname does **not** have to be used.
+
+~./mindraider.profile/<USERNAME>.xml
+
+```
+    ...
+    <j.0:hostname>dvorka</j.0:hostname>
+    ...
 ```

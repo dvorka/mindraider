@@ -1,6 +1,6 @@
 /*
  ===========================================================================
-   Copyright 2002-2011 Martin Dvorak
+   Copyright 2002-2018 Martin Dvorak
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

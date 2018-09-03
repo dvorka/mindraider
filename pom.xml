@@ -199,14 +199,14 @@
   </profiles>
 
   <repositories>
-      <!-- maven repository: mindcognition -->
+      <!-- maven repository: mindforger.com -->
       <repository>
           <snapshots>
               <enabled>false</enabled>
           </snapshots>
           <id>mindforgerComRepository</id>
           <name>MindForger.com Maven Repository</name>
-          <url>http://www.mindforger.com/maven</url>
+          <url>http://me.mindforger.com/maven</url>
       </repository>
       <repository>
           <snapshots>
