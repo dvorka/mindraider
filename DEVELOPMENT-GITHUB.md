@@ -30,7 +30,8 @@ To start development in Eclipse:
 1. Start `Eclipse`
 2. Import POM files using Eclipse menu/Import.../Maven/Existing Maven Projects
    from directory `${GIT}/mindraider`
-3. Open class `MindRaiderApplication` and run it as Java Application
+3. Open class `MindRaiderApplication` and run it as Java Application with the following options:
+   `-Dlog4j.configuration=/home/dvorka/p/mr/github/mindraider/mr7-release/src/main/distribution-linux/conf/log4j.properties`
 
 
 
