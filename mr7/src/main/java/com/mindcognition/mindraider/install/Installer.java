@@ -77,7 +77,7 @@ public class Installer {
     /**
      * Logger for this class.
      */
-    private static final Logger logger = Logger.getLogger(Installer.class);
+    private static final Logger LOGGER = Logger.getLogger(Installer.class);
 
     /**
      * The XML document declaration constant.
@@ -96,7 +96,7 @@ public class Installer {
 
     /**
      * Constructor.
-     * 
+     *
      * @param resourceDirectoryHome
      *            the resource directory home
      */
@@ -106,7 +106,7 @@ public class Installer {
 
     /**
      * Install everything :-) .
-     * 
+     *
      * @param hostname
      *            the hostname
      * @param username
@@ -124,30 +124,30 @@ public class Installer {
                 // try the development location... just a try ;-)
                 repositorySkeleton=MindRaider.installationDirectory+"/../mr7-release/src/main/distribution"+DIR_DISTRIBUTION_SKELETON;
             }
-            
-            logger.debug("Installing from: "+repositorySkeleton);
-            logger.debug("Installing to: "+resourceDirectoryHome);
+
+            LOGGER.debug("Installing from: "+repositorySkeleton);
+            LOGGER.debug("Installing to: "+resourceDirectoryHome);
 
             // check whether the repository is already initialized - if so, don't initialize it
             File folders = new File(resourceDirectoryHome + "/Notebooks");
             if (folders.exists()) {
-                logger.debug(Messages.getString("Installer.repositoryAlreadyInitialized"));
+                LOGGER.debug(Messages.getString("Installer.repositoryAlreadyInitialized"));
                 return;
             }
 
             // source repository skeleton
-            logger.debug(Messages.getString("Installer.installingRepository") + " <");
+            LOGGER.debug(Messages.getString("Installer.installingRepository") + " <");
             gatherDirectoryFiles(new File(repositorySkeleton), resourceDirectoryHome, repositorySkeleton.length());
-            logger.debug(">");
+            LOGGER.debug(">");
         } catch (Exception e) {
-            logger.error(Messages.getString("Installer.unableToInitializeRepository"), e);
+            LOGGER.error(Messages.getString("Installer.unableToInitializeRepository"), e);
 
         }
     }
 
     /**
      * Process only files under dir.
-     * 
+     *
      * @param dir
      *            the File
      * @param destinationDirectory
@@ -162,10 +162,10 @@ public class Installer {
         if (dir.isDirectory()) {
             String toFile = destinationDirectory + (fromFile.substring(prefixLng));
 
-            logger.debug("Dir: " + fromFile);
-            logger.debug(" =-> " + toFile);
-            if (logger.isDebugEnabled()) {
-                logger.debug("gatherDirectoryFiles() - :");
+            LOGGER.debug("Dir: " + fromFile);
+            LOGGER.debug(" =-> " + toFile);
+            if (LOGGER.isDebugEnabled()) {
+                LOGGER.debug("gatherDirectoryFiles() - :");
             }
             Utils.createDirectory(toFile);
 
@@ -176,10 +176,10 @@ public class Installer {
         } else {
             String toFile = destinationDirectory + (fromFile.substring(prefixLng));
 
-            logger.debug("File: " + fromFile);
-            logger.debug(" =-> " + toFile);
-            if (logger.isDebugEnabled()) {
-                logger.debug("gatherDirectoryFiles() - .");
+            LOGGER.debug("File: " + fromFile);
+            LOGGER.debug(" =-> " + toFile);
+            if (LOGGER.isDebugEnabled()) {
+                LOGGER.debug("gatherDirectoryFiles() - .");
             }
             FileUtils.copyFile(new File(fromFile), new File(toFile));
 
@@ -193,7 +193,7 @@ public class Installer {
     /**
      * Fix URIs - remove dvorka & savant in order to replace it with user's
      * hostname.
-     * 
+     *
      * @param filename
      *            the filename
      * @todo replace reading/closing file with commons-io functions
@@ -211,13 +211,13 @@ public class Installer {
                 stringBuffer.append("\n");
             }
         } catch (IOException e) {
-            logger.debug(Messages.getString("Installer.unableToReadFile", filename), e);
+            LOGGER.debug(Messages.getString("Installer.unableToReadFile", filename), e);
         } finally {
             if (in != null) {
                 try {
                     in.close();
                 } catch (IOException e1) {
-                    logger.debug(Messages.getString("Installer.unableToCloseReader"));
+                    LOGGER.debug(Messages.getString("Installer.unableToCloseReader"));
                 }
             }
         }
@@ -238,14 +238,14 @@ public class Installer {
             out = new BufferedWriter(new FileWriter(filename));
             out.write(old);
         } catch (Exception e) {
-            logger.debug(Messages.getString("Installer.unableToWriteFixedFile", filename), e);
+            LOGGER.debug(Messages.getString("Installer.unableToWriteFixedFile", filename), e);
         } finally {
             if (out != null) {
                 try {
                     out.flush();
                     out.close();
                 } catch (IOException e1) {
-                    logger.debug(Messages.getString("Installer.unableToCloseFile", filename), e1);
+                    LOGGER.debug(Messages.getString("Installer.unableToCloseFile", filename), e1);
                 }
             }
         }
@@ -263,10 +263,10 @@ public class Installer {
         profileHostname = MindRaider.profile.getHostname();
         profileUsername = MindRaider.user.getName();
 
-        String upgradeInfo = 
+        String upgradeInfo =
             "Upgrade check: " +  profileUsername+"@"+profileHostname+" # "+
             MindRaider.getVersion()+" -> "+ MindRaider.profile.getVersion();
-        logger.debug(upgradeInfo);
+        LOGGER.debug(upgradeInfo);
 
         boolean doUpgrade = false;
 
@@ -276,8 +276,8 @@ public class Installer {
             int dotIdx = MindRaider.profile.getVersion().indexOf('.');
             profileMajor = NumberUtils.createInteger(MindRaider.profile.getVersion().substring(0, dotIdx));
             profileMinor = NumberUtils.createInteger(MindRaider.profile.getVersion().substring(dotIdx + 1));
-            
-            logger.debug("  Parsed profile version: "+profileMajor+" # "+profileMinor); // {{debug}}
+
+            LOGGER.debug("  Parsed profile version: "+profileMajor+" # "+profileMinor); // {{debug}}
             if ((profileMajor < MindRaiderConstants.majorVersion) ||
                 (profileMajor == MindRaiderConstants.majorVersion) && (profileMinor < MindRaiderConstants.minorVersion)) {
                 doUpgrade = true;
@@ -290,7 +290,7 @@ public class Installer {
             return;
         }
 
-        logger.debug(Messages.getString("Installer.goingToUpgrade"));
+        LOGGER.debug(Messages.getString("Installer.goingToUpgrade"));
 
         // upgrade to more recent minor version
         if (profileMajor == 0) {
@@ -307,7 +307,7 @@ public class Installer {
                 upgradeTo0512();
             }
         }
-        
+
         if(profileMajor <= 7) {
             if(profileMinor < 1) {
                 upgradeTo71();
@@ -317,17 +317,17 @@ public class Installer {
             }
             if(profileMinor < 3) {
                 upgradeTo73();
-            }            
+            }
             if(profileMinor < 5) {
                 upgradeTo75();
-            }            
+            }
             if(profileMinor < 6) {
                 upgradeTo76();
-            }            
+            }
             if(profileMinor < 7) {
                 upgradeTo80();
-            }            
-        }        
+            }
+        }
     }
 
     /**
@@ -335,7 +335,7 @@ public class Installer {
      * 3. concept resources
      */
     private static void upgradeTo0506() {
-        logger.debug(Messages.getString("Installer.upgradingTo", "0.506"));
+        LOGGER.debug(Messages.getString("Installer.upgradingTo", "0.506"));
 
         try {
             // 1. repair notebook models
@@ -350,7 +350,7 @@ public class Installer {
                         // resave folder resource
                         new FolderResource(MindRaider.labelCustodian.get(uri)).save();
                     } catch (Exception e2) {
-                        logger.debug(Messages.getString("Installer.unableToResaveFolder", uri), e2);
+                        LOGGER.debug(Messages.getString("Installer.unableToResaveFolder", uri), e2);
                     }
 
                     ResourceDescriptor[] notebooks = MindRaider.labelCustodian.getOutlineDescriptors(uri);
@@ -380,7 +380,7 @@ public class Installer {
                                 // save resource to update its properties
                                 notebookResource.save();
                             } catch (Exception e1) {
-                                logger.error("Unable to save notebook!", e1);
+                                LOGGER.error("Unable to save notebook!", e1);
                             }
                             String[] conceptUris = notebookResource.getConceptUris();
                             if (!ArrayUtils.isEmpty(conceptUris)) {
@@ -405,7 +405,7 @@ public class Installer {
                                             while (a.hasNext()) {
                                                 String url = a.nextStatement().getObject().toString();
 
-                                                logger.debug(Messages.getString("Installer.attachmentUrl", url));
+                                                LOGGER.debug(Messages.getString("Installer.attachmentUrl", url));
                                                 conceptResource.addAttachment(null, url);
                                             }
                                         }
@@ -437,7 +437,7 @@ public class Installer {
                                                 .getRelativePath(MindRaider.noteCustodian
                                                         .getConceptResourceFilename(notebookUri, conceptUri)));
                                     } catch (Exception e) {
-                                        logger.error(Messages.getString("Installer.unableToUpgradeConcept"), e);
+                                        LOGGER.error(Messages.getString("Installer.unableToUpgradeConcept"), e);
                                     }
                                 }
                             }
@@ -465,7 +465,7 @@ public class Installer {
      * upgrade to 0.507 version of MR.
      */
     private static void upgradeTo0507() {
-        logger.debug(Messages.getString("Installer.upgradingTo", "0.507"));
+        LOGGER.debug(Messages.getString("Installer.upgradingTo", "0.507"));
 
         // update type of the resource in the profile
         Resource resource = MindRaider.profile.getModel().getResource(
@@ -486,15 +486,15 @@ public class Installer {
      * upgrade to 0.511 version of MR.
      */
     private static void upgradeTo0511() {
-        logger.debug(Messages.getString("Installer.upgradingTo", "0.511"));
+        LOGGER.debug(Messages.getString("Installer.upgradingTo", "0.511"));
 
         // *) make zip archive of the old repository
-        backupRepository();
+        backupRepositoryAsZip();
 
         // *) documentation upgrade - delete old documentation, copy new
         // documentation there
-        if (logger.isDebugEnabled()) {
-            logger.debug("upgradeTo0511() -      Upgrading documentation... <");
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug("upgradeTo0511() -      Upgrading documentation... <");
         }
         // o determine whether documentation folder
         // o determine whether documentation notebooks exists (notebook
@@ -508,27 +508,27 @@ public class Installer {
         try {
             String mrFolderUri = MindRaiderVocabulary.getFolderUri(OutlineCustodian.MR_DOC_FOLDER_LOCAL_NAME);
             if (!MindRaider.labelCustodian.exists(mrFolderUri)) {
-                logger.debug(Messages.getString("Installer.creatingMindRaiderFolder"));
+                LOGGER.debug(Messages.getString("Installer.creatingMindRaiderFolder"));
                 MindRaider.labelCustodian.create("MR", mrFolderUri);
             }
             String introNotebookUri = MindRaiderVocabulary
                     .getNotebookUri(OutlineCustodian.MR_DOC_NOTEBOOK_INTRODUCTION_LOCAL_NAME);
             if (!MindRaider.outlineCustodian.exists(introNotebookUri)) {
-                logger.debug(Messages.getString("Installer.creatingIntroductionNotebook"));
+                LOGGER.debug(Messages.getString("Installer.creatingIntroductionNotebook"));
                 MindRaider.outlineCustodian.create("Introduction", introNotebookUri, "MR Introduction", false);
                 MindRaider.labelCustodian.addOutline(mrFolderUri, introNotebookUri);
             }
             String docNotebookUri = MindRaiderVocabulary
                     .getNotebookUri(OutlineCustodian.MR_DOC_NOTEBOOK_DOCUMENTATION_LOCAL_NAME);
             if (!MindRaider.outlineCustodian.exists(docNotebookUri)) {
-                logger.debug(Messages.getString("Installer.creatingDocumentationNotebook"));
+                LOGGER.debug(Messages.getString("Installer.creatingDocumentationNotebook"));
                 MindRaider.outlineCustodian.create("Documentation", docNotebookUri, "MR Documentation", false);
                 MindRaider.labelCustodian.addOutline(mrFolderUri, docNotebookUri);
             }
             String developersNotebookUri = MindRaiderVocabulary
                     .getNotebookUri(OutlineCustodian.MR_DOC_NOTEBOOK_FOR_DEVELOPERS_LOCAL_NAME);
             if (!MindRaider.outlineCustodian.exists(developersNotebookUri)) {
-                logger.debug(Messages.getString("Installer.creatingForDevelopersNotebook"));
+                LOGGER.debug(Messages.getString("Installer.creatingForDevelopersNotebook"));
                 MindRaider.outlineCustodian.create("For Developers", developersNotebookUri, "For Developers", false);
                 MindRaider.labelCustodian.addOutline(mrFolderUri, developersNotebookUri);
             }
@@ -540,9 +540,9 @@ public class Installer {
 
             ExplorerJPanel.getInstance().refresh();
         } catch (Exception e) {
-            logger.debug("upgradeTo0511(): unable to upgrade documentation!");
+            LOGGER.debug("upgradeTo0511(): unable to upgrade documentation!");
         }
-        logger.debug(">\n" + Messages.getString("Installer.documentationUpgraded"));
+        LOGGER.debug(">\n" + Messages.getString("Installer.documentationUpgraded"));
 
         // *) replace categories file - copy there just single file
         try {
@@ -556,8 +556,8 @@ public class Installer {
             FileUtils.copyFile(new File(MindRaider.installationDirectory + DIR_DISTRIBUTION_SKELETON
                     + categoriesOntologySuffix), new File(target));
         } catch (Exception e2) {
-            logger.error(Messages.getString("Installer.unableToCopyNotebooksCategoriesOntology"), e2);
-            logger.error("upgradeTo0511()", e2);
+            LOGGER.error(Messages.getString("Installer.unableToCopyNotebooksCategoriesOntology"), e2);
+            LOGGER.error("upgradeTo0511()", e2);
         }
 
         // *) internationalization
@@ -567,16 +567,16 @@ public class Installer {
         // <?xml
         // with
         // <?xml version="1.0" encoding="UTF-8"?>
-        if (logger.isDebugEnabled()) {
-            logger.debug(Messages.getString("Installer.internationalization") + " <");
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug(Messages.getString("Installer.internationalization") + " <");
         }
 
         try {
             internationalizationUpgradeTo511(new File(MindRaider.profile.getHomeDirectory()));
         } catch (Exception e) {
-            logger.debug(Messages.getString("Installer.unableToInternationalize"), e);
+            LOGGER.debug(Messages.getString("Installer.unableToInternationalize"), e);
         } finally {
-            logger.debug(">\n" + Messages.getString("Installer.internationalizationUpgradeFinished"));
+            LOGGER.debug(">\n" + Messages.getString("Installer.internationalizationUpgradeFinished"));
         }
 
         // *) internationalization - profile: encoding changed automatically
@@ -596,7 +596,7 @@ public class Installer {
      */
     private static void upgradeTo0512() {
         SearchCommander.rebuildSearchAndTagIndices();
-        Installer.backupRepositoryAsync();
+        Installer.backupRepositoryAsZipAsync();
 
         MindRaider.profile.version = MindRaider.getVersion();
         MindRaider.profile.save();
@@ -605,7 +605,7 @@ public class Installer {
     /**
      * upgrade to 0.601 - the tag release: tag index is build.
      */
-    private static void upgradeTo71() {        
+    private static void upgradeTo71() {
         // refresh stylesheets/css/javascript/...
         String xslSkeleton = MindRaider.installationDirectory + DIR_DISTRIBUTION_SKELETON + File.separator + "lib";
         // if distribution directory doesn't exist, try development one
@@ -613,35 +613,35 @@ public class Installer {
             xslSkeleton = MindRaider.installationDirectory + "/../mr7-release/src/main/distribution" + DIR_DISTRIBUTION_SKELETON + File.separator + "lib";
         }
         String targetDirectory = MindRaider.profile.getHomeDirectory()+File.separator+"lib";
-        logger.debug("Upgrade to 7.1: "+xslSkeleton+" # "+targetDirectory);
+        LOGGER.debug("Upgrade to 7.1: "+xslSkeleton+" # "+targetDirectory);
         try {
             gatherDirectoryFiles(
                     new File(xslSkeleton),
                     targetDirectory,
                     xslSkeleton.length());
         } catch (Exception e) {
-            logger.error("Unable to copy XSL/JS/CSS resources to the repository.",e); // {{debug}}
+            LOGGER.error("Unable to copy XSL/JS/CSS resources to the repository.",e); // {{debug}}
         }
-        
-        SearchCommander.rebuildSearchAndTagIndices();        
-        Installer.backupRepositoryAsync();
+
+        SearchCommander.rebuildSearchAndTagIndices();
+        Installer.backupRepositoryAsZipAsync();
 
         MindRaider.profile.version = MindRaider.getVersion();
-        MindRaider.profile.save();        
+        MindRaider.profile.save();
     }
-    
+
     private static void upgradeTo72() {
-        upgradeSanityCheck();        
+        upgradeSanityCheck();
     }
 
     private static void upgradeTo73() {
         upgradeSanityCheck();
     }
-    
+
     private static void upgradeTo75() {
         upgradeSanityCheck();
     }
-    
+
     private static void upgradeTo76() {
         upgradeSanityCheck();
     }
@@ -649,17 +649,17 @@ public class Installer {
     private static void upgradeTo80() {
         upgradeSanityCheck();
     }
-    
-    
+
     /**
      * Asynchronous repository backup ensuring dialog refreshing.
      */
-    public static void backupRepositoryAsync() {
+    public static void backupRepositoryAsZipAsync() {
         Thread thread = new Thread() {
+            @Override
             public void run() {
-                
+
                 String targetFile;
-                if ((targetFile = backupRepository()) == null) {
+                if ((targetFile = backupRepositoryAsZip()) == null) {
                     JOptionPane.showMessageDialog(MindRaider.mainJFrame, Messages
                             .getString("Installer.UnableToBackupRepository"), Messages
                             .getString("Installer.backupError"), JOptionPane.ERROR_MESSAGE);
@@ -676,28 +676,104 @@ public class Installer {
 
     /**
      * Backup repository.
-     * 
+     *
      * @return location of the directory where was the directory backup.
      */
-    public static String backupRepository() {
-
-        logger.debug(Messages.getString("Installer.makingBackupRepository", MindRaider.profile.getHomeDirectory()));
+    public static String backupRepositoryAsZip() {
+        LOGGER.debug(Messages.getString("Installer.makingZipBackupRepository", MindRaider.profile.getHomeDirectory()));
 
         try {
             // use book & make helper
             String zipFileName = new File(MindRaider.profile.getHomeDirectory()).getParent() + File.separator +
-                    "MindRaider" +
+                    "MindRaider-" +
                     MindRaiderConstants.majorVersion+
                     "."+
                     MindRaiderConstants.minorVersion+
-                    "-backup-"+Utils.getCurrentDataTimeAsPrettyString()+".zip";        
+                    "-backup-"+Utils.getCurrentDataTimeAsPrettyString()+".zip";
 
             Zipper.zip(zipFileName, MindRaider.profile.getHomeDirectory());
-            logger.debug(Messages.getString("Installer.backupCreated", zipFileName));
+            LOGGER.debug(Messages.getString("Installer.backupCreated", zipFileName));
 
             return zipFileName;
         } catch (Exception e1) {
-            logger.error(Messages.getString("Installer.unableToBackupRepositoryDirectory"), e1);
+            LOGGER.error(Messages.getString("Installer.unableToBackupRepositoryDirectory"), e1);
+        }
+
+        return null;
+    }
+
+    public static void backupRepositoryAsTWikiDirectoryAsync() {
+        Thread thread = new Thread() {
+            @Override
+            public void run() {
+                String targetFile;
+                if ((targetFile = backupRepositoryAsTWikiDirectory()) == null) {
+                    JOptionPane.showMessageDialog(MindRaider.mainJFrame, Messages
+                            .getString("Installer.UnableToBackupRepository"), Messages
+                            .getString("Installer.backupError"), JOptionPane.ERROR_MESSAGE);
+                } else {
+                    JOptionPane.showMessageDialog(MindRaider.mainJFrame, Messages.getString(
+                            "Installer.repositoryBackupStoredTo", targetFile), Messages
+                            .getString("Installer.backupResult"), JOptionPane.INFORMATION_MESSAGE);
+                }
+            }
+        };
+        thread.setDaemon(true);
+        thread.start();
+    }
+
+    public static String backupRepositoryAsTWikiDirectory() {
+        LOGGER.debug(Messages.getString("Installer.makingTWikiBackupRepository", MindRaider.profile.getHomeDirectory()));
+
+        try {
+            String twikiDirFileName = new File(MindRaider.profile.getHomeDirectory()).getParent() + File.separator +
+                    "MindRaider-" +
+                    MindRaiderConstants.majorVersion+
+                    "."+
+                    MindRaiderConstants.minorVersion+
+                    "-twiki-backup-"+Utils.getCurrentDataTimeAsPrettyString();
+
+            File targetDir = new File(twikiDirFileName);
+            if(!targetDir.exists()) {
+                if(targetDir.mkdir()) {
+                    ResourceDescriptor[] labelDescriptors
+                    = MindRaider.labelCustodian.getLabelDescriptors();
+                    if(!ArrayUtils.isEmpty(labelDescriptors)) {
+                        for (ResourceDescriptor labelDescriptor : labelDescriptors) {
+                            String labelUri = labelDescriptor.getUri();
+                            ResourceDescriptor[] outlineDescriptors
+                            = MindRaider.labelCustodian.getOutlineDescriptors(labelUri);
+                            if (outlineDescriptors != null) {
+                                for (ResourceDescriptor outlineDescriptor : outlineDescriptors) {
+                                    // load outline to be exported
+                                    if(MindRaider.outlineCustodian.loadOutline(new URI(outlineDescriptor.getUri()))) {
+                                        String dstFileName =
+                                                MindRaider.outlineCustodian.getActiveNotebookNcName()
+                                                + "-"
+                                                + Utils.getCurrentDataTimeAsPrettyString()
+                                                + ".twiki";
+                                        LOGGER.debug(Messages.getString("MindRaiderJFrame.exportingToFile", dstFileName));
+                                        StatusBar.setText("Exporting Outline: "+MindRaider.outlineCustodian.getActiveNotebookLabel()); // TODO l10n
+                                        MindRaider.outlineCustodian.exportOutline(OutlineCustodian.FORMAT_TWIKI, twikiDirFileName+File.separator+dstFileName);
+                                    } else {
+                                        LOGGER.error("Unable to load outline: "+outlineDescriptor.getUri());
+                                        // skip it and continue
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    return twikiDirFileName;
+                } else {
+                    LOGGER.error("Unable to create target dir: "+targetDir.getAbsolutePath());
+                    return null;
+                }
+            } else {
+                LOGGER.error("Target directory already exists: "+targetDir.getAbsolutePath());
+                return null;
+            }
+        } catch (Exception e1) {
+            LOGGER.error(Messages.getString("Installer.unableToBackupRepositoryDirectory"), e1);
         }
 
         return null;
@@ -705,7 +781,7 @@ public class Installer {
 
     /**
      * Upgrade documentation notebook.
-     * 
+     *
      * @param notebookLocalName
      *            the notebook local name
      * @throws Exception
@@ -716,10 +792,10 @@ public class Installer {
                 + notebookLocalName;
         File file = new File(MindRaider.profile.getHomeDirectory() + relativePath);
 
-        logger.debug(Messages.getString("Installer.checkingNotebookExistence", file.getAbsolutePath()));
+        LOGGER.debug(Messages.getString("Installer.checkingNotebookExistence", file.getAbsolutePath()));
         if (file.exists()) {
 
-            logger.debug(Messages.getString("Installer.renewing", file.getAbsolutePath()));
+            LOGGER.debug(Messages.getString("Installer.renewing", file.getAbsolutePath()));
             Utils.deleteSubtree(file);
             file.mkdirs();
             String sourceSkeleton = MindRaider.installationDirectory + DIR_DISTRIBUTION_SKELETON + relativePath;
@@ -730,7 +806,7 @@ public class Installer {
 
     /**
      * Process only files under dir.
-     * 
+     *
      * @param dir
      *            the file
      * @throws Exception
@@ -739,11 +815,11 @@ public class Installer {
     public static void internationalizationUpgradeTo511(File dir) throws Exception {
         String fromFile = dir.getPath();
         if (dir.isDirectory()) {
-            logger.debug("Dir: " + fromFile);
+            LOGGER.debug("Dir: " + fromFile);
             StatusBar.setText(" Directory: ",fromFile,70);
 
-            if (logger.isDebugEnabled()) {
-                logger.debug("internationalizationUpgradeTo511()");
+            if (LOGGER.isDebugEnabled()) {
+                LOGGER.debug("internationalizationUpgradeTo511()");
             }
 
             String[] children = dir.list();
@@ -751,20 +827,20 @@ public class Installer {
                 internationalizationUpgradeTo511(new File(dir, child));
             }
         } else {
-            logger.debug("File: " + fromFile);
+            LOGGER.debug("File: " + fromFile);
             StatusBar.setText(" File: ",fromFile,70);
             if (fromFile.endsWith(".xml")) {
                 internationalizationUpgradeTo511(fromFile);
             }
-            if (logger.isDebugEnabled()) {
-                logger.debug("internationalizationUpgradeTo511()");
+            if (LOGGER.isDebugEnabled()) {
+                LOGGER.debug("internationalizationUpgradeTo511()");
             }
         }
     }
 
     /**
      * Change XML Decl to <?xml version="1.0" encoding="UTF-8"?>.
-     * 
+     *
      * @param filename
      *            the filename
      */
@@ -774,7 +850,7 @@ public class Installer {
         try {
             content = FileUtils.readFileToString(new File(filename), "UTF-8");
         } catch (IOException e) {
-            logger.debug(Messages.getString("Installer.unableToReadFile", filename), e);
+            LOGGER.debug(Messages.getString("Installer.unableToReadFile", filename), e);
         }
 
         String s;
@@ -793,24 +869,24 @@ public class Installer {
             s = new String(s.getBytes(), "UTF-8");
             // logger.debug("#"+s+"#");
         } catch (Exception e) {
-            logger.debug(Messages.getString("Installer.unableToReencode"), e);
+            LOGGER.debug(Messages.getString("Installer.unableToReencode"), e);
             return;
         }
 
         try {
             FileUtils.writeStringToFile(new File(filename), s, "UTF-8");
         } catch (Exception e) {
-            logger.debug(Messages.getString("Installer.unableToWriteFixedFile", filename), e);
+            LOGGER.debug(Messages.getString("Installer.unableToWriteFixedFile", filename), e);
         }
     }
-    
+
     private static void upgradeSanityCheck() {
-        Installer.backupRepositoryAsync();
+        Installer.backupRepositoryAsZipAsync();
         Checker.checkAndFixRepository();
-        SearchCommander.rebuildSearchAndTagIndices();        
+        SearchCommander.rebuildSearchAndTagIndices();
 
         MindRaider.profile.version = MindRaider.getVersion();
         MindRaider.profile.save();
     }
-    
+
 }

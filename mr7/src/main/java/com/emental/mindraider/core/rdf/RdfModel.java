@@ -270,7 +270,7 @@ public class RdfModel {
             logger.debug("Unable to load model!", e);   
             // something is wrong (model file is probably broken) -> run check & fix
             if(checkAndFixOnError) {
-                Installer.backupRepository();
+                Installer.backupRepositoryAsZip();
                 Checker.checkAndFixRepository();
             }
             return null;

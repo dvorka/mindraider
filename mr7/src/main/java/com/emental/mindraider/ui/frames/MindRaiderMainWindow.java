@@ -113,7 +113,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
     public DragAndDropReference dragAndDropReference;
     private boolean latelyMaximized;
     private ConfigurationBean configuration;
-    
+
     private static MindRaiderMainWindow singleton;
     public static MindRaiderMainWindow getInstance() {
         if (singleton == null) {
@@ -125,6 +125,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
     private MindRaiderMainWindow() {
         super(MindRaider.getTitle(), Gfx.getGraphicsConfiguration());
         addWindowListener(new WindowAdapter() {
+            @Override
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
             }
@@ -133,9 +134,9 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         addComponentListener(this);
 
         configuration=new ConfigurationBean();
-        
+
         // drag & drop registration
-        DropTarget dropTarget = new DropTarget(this, (DropTargetListener) this);
+        DropTarget dropTarget = new DropTarget(this, this);
         this.setDropTarget(dropTarget);
 
         // warn on different java version
@@ -170,16 +171,17 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         // TODO add icons to tabs
         leftSidebar.addTab(Messages.getString("MindRaiderJFrame.explorer"),
                 ExplorerJPanel.getInstance());
-        
+
         // TODO just blank panel
         //leftSidebar.addTab("Tags",new OutlookBarMain());
-        
-        leftSidebar.addTab(Messages.getString("MindRaiderJFrame.trash"), /* IconsRegistry.getImageIcon("trashFull.png"), */                        
+
+        leftSidebar.addTab(Messages.getString("MindRaiderJFrame.trash"), /* IconsRegistry.getImageIcon("trashFull.png"), */
         TrashJPanel.getInstance());
-                
+
         leftSidebar.setSelectedIndex(0);
         leftSidebar.addChangeListener(new ChangeListener() {
 
+            @Override
             public void stateChanged(ChangeEvent arg0) {
                 if (arg0.getSource() instanceof JTabbedPane) {
                     if (leftSidebar.getSelectedIndex() == 1) {
@@ -212,13 +214,13 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         if(!configuration.isShowSpidersTagSnailPane()) {
             OutlineJPanel.getInstance().hideSpiders();
         }
-        
-        splash.hideSplash();        
+
+        splash.hideSplash();
     }
 
     /**
      * Build main menu.
-     * 
+     *
      * @param spiders
      */
     private void buildMenu(final SpidersGraph spiders) {
@@ -240,6 +242,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setMnemonic(KeyEvent.VK_H);
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 MindRaider.profile.setHomeNotebook();
             }
@@ -252,6 +255,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setMnemonic(KeyEvent.VK_P);
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 new PreferencesJDialog();
             }
@@ -264,6 +268,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
                 KeyEvent.VK_X);
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 exitMindRaider();
             }
@@ -281,30 +286,33 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setMnemonic(KeyEvent.VK_N);
         menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, ActionEvent.CTRL_MASK | ActionEvent.SHIFT_MASK));
         menuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 new OpenOutlineJDialog();
             }
         });
         menu.add(menuItem);
-                
+
         menuItem = new JMenuItem(Messages.getString("MindRaiderJFrame.searchFulltext"));
         menuItem.setMnemonic(KeyEvent.VK_F);
         menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F,
                 ActionEvent.CTRL_MASK | ActionEvent.SHIFT_MASK));
         menuItem.setEnabled(true);
         menuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 new FtsJDialog();
             }
         });
         menu.add(menuItem);
-        
+
         menuItem = new JMenuItem(Messages.getString("MindRaiderJFrame.searchConceptsInNotebook"));
         menuItem.setMnemonic(KeyEvent.VK_C);
         menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N,
                 ActionEvent.CTRL_MASK | ActionEvent.SHIFT_MASK));
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 if (MindRaider.profile.getActiveOutlineUri() != null) {
                     new OpenNoteJDialog();
@@ -312,7 +320,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
             }
         });
         menu.add(menuItem);
-        
+
         // search by tag
         menuItem = new JMenuItem(Messages.getString("MindRaiderJFrame.searchConceptsByTag"));
         menuItem.setEnabled(true);
@@ -321,6 +329,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
                 ActionEvent.CTRL_MASK | ActionEvent.SHIFT_MASK));
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 new OpenConceptByTagJDialog();
             }
@@ -334,12 +343,13 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setMnemonic(KeyEvent.VK_P);
         menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_LEFT, ActionEvent.ALT_MASK));
         menuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
-                MindRaider.recentConcepts.moveOneNoteBack();                
+                MindRaider.recentConcepts.moveOneNoteBack();
             }
         });
         menu.add(menuItem);
-        
+
         // global RDF search
 //        menuItem = new JMenuItem(Messages.getString("MindRaiderJFrame.searchRdql"));
 //        menuItem.setEnabled(false);
@@ -353,7 +363,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
 //            }
 //        });
 //        menu.add(menuItem);
-        
+
         menuBar.add(menu);
 
         // - view ------------------------------------------------------------
@@ -375,6 +385,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         subMenuItem.setEnabled(true);
         subMenuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 setLookAndFeel(MindRaider.LF_NATIVE);
             }
@@ -390,6 +401,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         subMenuItem.setEnabled(true);
         subMenuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 setLookAndFeel(MindRaider.LF_JAVA_DEFAULT);
             }
@@ -404,6 +416,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setMnemonic(KeyEvent.VK_L);
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 if (leftSidebarSplitPane.getDividerLocation() == 1) {
                     leftSidebarSplitPane.resetToPreferredSizes();
@@ -419,6 +432,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setMnemonic(KeyEvent.VK_R);
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 OutlineJPanel.getInstance().toggleRightSidebar();
             }
@@ -434,6 +448,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setMnemonic(KeyEvent.VK_T);
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 MindRaider.masterToolBar.toggleVisibility();
             }
@@ -445,6 +460,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setMnemonic(KeyEvent.VK_D);
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 MindRaider.spidersGraph.getGlPanel().toggleControlPanel();
             }
@@ -486,6 +502,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
             checkboxMenuItem.setState(MindRaider.spidersGraph.isUriLabels());
             checkboxMenuItem.addActionListener(new ActionListener() {
 
+                @Override
                 public void actionPerformed(ActionEvent e) {
                     if (e.getSource() instanceof JCheckBoxMenuItem) {
                         JCheckBoxMenuItem j = (JCheckBoxMenuItem) e.getSource();
@@ -507,6 +524,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
                     .getHidePredicates());
             checkboxMenuItem.addActionListener(new ActionListener() {
 
+                @Override
                 public void actionPerformed(ActionEvent e) {
                     if (e.getSource() instanceof JCheckBoxMenuItem) {
                         JCheckBoxMenuItem j = (JCheckBoxMenuItem) e.getSource();
@@ -527,6 +545,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
                     .isMultilineNodes());
             checkboxMenuItem.addActionListener(new ActionListener() {
 
+                @Override
                 public void actionPerformed(ActionEvent e) {
                     if (e.getSource() instanceof JCheckBoxMenuItem) {
                         JCheckBoxMenuItem j = (JCheckBoxMenuItem) e.getSource();
@@ -550,6 +569,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         checkboxMenuItem.setState(SpidersGraph.antialiased);
         checkboxMenuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() instanceof JCheckBoxMenuItem) {
                     JCheckBoxMenuItem j = (JCheckBoxMenuItem) e.getSource();
@@ -565,6 +585,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         checkboxMenuItem.setMnemonic(KeyEvent.VK_H);
         checkboxMenuItem.setState(SpidersGraph.hyperbolic);
         checkboxMenuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() instanceof JCheckBoxMenuItem) {
                     JCheckBoxMenuItem j = (JCheckBoxMenuItem) e.getSource();
@@ -580,6 +601,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         checkboxMenuItem.setMnemonic(KeyEvent.VK_F);
         checkboxMenuItem.setState(SpidersGraph.fps);
         checkboxMenuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() instanceof JCheckBoxMenuItem) {
                     JCheckBoxMenuItem j = (JCheckBoxMenuItem) e.getSource();
@@ -590,8 +612,8 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         });
         menu.add(checkboxMenuItem);
 
-        
-        
+
+
         // Graph color scheme
         submenu = new JMenu(Messages.getString("MindRaiderJFrame.colorScheme"));
         submenu.setMnemonic(KeyEvent.VK_C);
@@ -602,6 +624,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
                     MindRaider.spidersColorProfileRegistry.getColorProfileByUri(allProfilesUris[i]).getLabel(),
                     allProfilesUris[i]);
             rbMenuItem.addActionListener(new ActionListener() {
+                @Override
                 public void actionPerformed(ActionEvent e) {
                     if(e.getSource() instanceof UriJRadioButtonMenuItem) {
                         MindRaider.spidersColorProfileRegistry.setCurrentProfile(
@@ -617,8 +640,8 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         }
         menu.add(submenu);
 
-        
-        
+
+
         // Annotation color scheme
         submenu = new JMenu(Messages.getString("MindRaiderJFrame.colorSchemeAnnotation"));
         submenu.setMnemonic(KeyEvent.VK_A);
@@ -629,6 +652,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
                     MindRaider.annotationColorProfileRegistry.getColorProfileByUri(allProfilesUris[i]).getLabel(),
                     allProfilesUris[i]);
             rbMenuItem.addActionListener(new ActionListener() {
+                @Override
                 public void actionPerformed(ActionEvent e) {
                     if(e.getSource() instanceof UriJRadioButtonMenuItem) {
                         MindRaider.annotationColorProfileRegistry.setCurrentProfile(
@@ -641,9 +665,9 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
             submenu.add(rbMenuItem);
         }
         menu.add(submenu);
-        
-        
-        
+
+
+
         menu.addSeparator();
 
         checkboxMenuItem = new JCheckBoxMenuItem(Messages
@@ -654,6 +678,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         checkboxMenuItem.setState(false);
         checkboxMenuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() instanceof JCheckBoxMenuItem) {
                     JCheckBoxMenuItem j = (JCheckBoxMenuItem) e.getSource();
@@ -681,6 +706,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
                         KeyEvent.VK_O, ActionEvent.CTRL_MASK));
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 // TODO clear should be optional - only if creation finished
                 // MindRider.spidersGraph.clear();
@@ -695,6 +721,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
                 ActionEvent.CTRL_MASK | ActionEvent.SHIFT_MASK));
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 new OpenOutlineJDialog();
             }
@@ -705,6 +732,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setMnemonic(KeyEvent.VK_C);
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 MindRaider.outlineCustodian.close();
                 OutlineJPanel.getInstance().refresh();
@@ -718,6 +746,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setEnabled(false); // TODO discard method must be implemented
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 int result = JOptionPane.showConfirmDialog(
                         MindRaiderMainWindow.this, Messages.getString(
@@ -758,12 +787,13 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
             }
         });
         submenu.add(subMenuItem);
-        
+
         // OPML
         subMenuItem = new JMenuItem(Messages.getString("MindRaiderJFrame.opml"));
         subMenuItem.setEnabled(true);
         subMenuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 if (MindRaider.profile.getActiveOutline() == null) {
                     JOptionPane
@@ -815,15 +845,14 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         subMenuItem.setEnabled(true);
         subMenuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 if (MindRaider.profile.getActiveOutline() == null) {
                     JOptionPane
                             .showMessageDialog(
                                     MindRaiderMainWindow.this,
-                                    Messages
-                                            .getString("MindRaiderJFrame.exportNotebookWarning"),
-                                    Messages
-                                            .getString("MindRaiderJFrame.exportError"),
+                                    Messages.getString("MindRaiderJFrame.exportNotebookWarning"),
+                                    Messages.getString("MindRaiderJFrame.exportError"),
                                     JOptionPane.ERROR_MESSAGE);
                     return;
                 }
@@ -861,27 +890,29 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
             }
         });
         submenu.add(subMenuItem);
-        
+
         menu.add(submenu);
 
         // import
         submenu = new JMenu(Messages.getString("MindRaiderJFrame.import"));
         submenu.setMnemonic(KeyEvent.VK_I);
-        
+
         subMenuItem = new JMenuItem("Atom");
         subMenuItem.setEnabled(true);
         subMenuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 importFromAtom();
             }
         });
         submenu.add(subMenuItem);
-                
+
         // TWiki
         subMenuItem = new JMenuItem("TWiki");
         subMenuItem.setEnabled(true);
         subMenuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 // choose file to be transformed
                 OutlineJPanel.getInstance().clear();
@@ -893,10 +924,11 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
                     MindRaider.profile.deleteActiveModel();
                     logger.debug(Messages.getString(
                             "MindRaiderJFrame.importingTWikiTopic", file.getAbsolutePath()));
-                    
+
                     // perform it async
                     final SwingWorker worker = new SwingWorker() {
 
+                        @Override
                         public Object construct() {
                             ProgressDialogJFrame progressDialogJFrame = new ProgressDialogJFrame(
                                     Messages
@@ -924,7 +956,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
             }
         });
         submenu.add(subMenuItem);
-        
+
         menu.add(submenu);
 
         menuBar.add(menu);
@@ -941,6 +973,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
                         KeyEvent.VK_N, ActionEvent.CTRL_MASK));
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 OutlineJPanel.getInstance().newConcept();
             }
@@ -954,6 +987,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
                         KeyEvent.VK_N, ActionEvent.CTRL_MASK | ActionEvent.SHIFT_MASK));
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 if (MindRaider.profile.getActiveOutlineUri() != null) {
                     new OpenNoteJDialog();
@@ -968,6 +1002,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_DELETE,0));
         menuItem.setMnemonic(KeyEvent.VK_D);
         menuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 OutlineJPanel.getInstance().conceptDiscard();
             }
@@ -984,6 +1019,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setEnabled(true);
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 OutlineJPanel.getInstance().conceptUp();
             }
@@ -997,6 +1033,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setEnabled(true);
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 OutlineJPanel.getInstance().conceptPromote();
             }
@@ -1010,6 +1047,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setEnabled(true);
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 OutlineJPanel.getInstance().conceptDemote();
             }
@@ -1022,6 +1060,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setEnabled(true);
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 OutlineJPanel.getInstance().conceptDown();
             }
@@ -1029,46 +1068,64 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menu.add(menuItem);
 
         menuBar.add(menu);
-        
+
         // - Tools -----------------------------------------------------------
 
         menu = new JMenu(Messages.getString("MindRaiderJFrame.tools"));
         menu.setMnemonic(KeyEvent.VK_T);
-        
+
         menuItem = new JMenuItem(Messages.getString("MindRaiderMainWindow.checkAndFix"));
         menuItem.setMnemonic(KeyEvent.VK_F);
         menuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 Checker.checkAndFixRepositoryAsync();
             }
         });
         menu.add(menuItem);
-        
-        menuItem = new JMenuItem(Messages.getString("MindRaiderJFrame.backupRepository"));
-        menuItem.setMnemonic(KeyEvent.VK_B);
-        menuItem.addActionListener(new ActionListener() {
+
+        submenu = new JMenu(Messages.getString("MindRaiderJFrame.backupRepository"));
+        submenu .setMnemonic(KeyEvent.VK_B);
+        // backup as .zip
+        subMenuItem = new JMenuItem("Zip");
+        subMenuItem.setEnabled(true);
+        subMenuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
-                Installer.backupRepositoryAsync();
+                Installer.backupRepositoryAsZipAsync();
             }
         });
-        menu.add(menuItem);
+        submenu.add(subMenuItem);
+        // backup as directory of twiki files
+        subMenuItem = new JMenuItem("TWiki");
+        subMenuItem.setEnabled(true);
+        subMenuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Installer.backupRepositoryAsTWikiDirectoryAsync();
+            }
+        });
+        submenu.add(subMenuItem);
+        menu.add(submenu);
 
         menuItem = new JMenuItem(Messages
                 .getString("MindRaiderJFrame.rebuildSearchIndex"));
         menuItem.setMnemonic(KeyEvent.VK_R);
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 SearchCommander.rebuildSearchAndTagIndices();
             }
         });
         menu.add(menuItem);
-                        
+
         menu.addSeparator();
-                       
+
         menuItem = new JMenuItem(Messages.getString("MindRaiderMainWindow.captureScreen"));
         menuItem.setMnemonic(KeyEvent.VK_S);
         menuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 JFileChooser fc = new JFileChooser();
                 fc.setApproveButtonText(Messages.getString("MindRaiderJFrame.screenshot"));
@@ -1088,7 +1145,8 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
 
                     // do it in async (redraw screen)
                     Thread thread = new Thread() {
-                        public void run() {                                                        
+                        @Override
+                        public void run() {
                             OutputStream file = null;
                             try {
                                 file = new FileOutputStream(filename);
@@ -1123,9 +1181,9 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
             }
         });
         menu.add(menuItem);
-        
+
         menuBar.add(menu);
-        
+
         // - MindForger -----------------------------------------------------------
 
         menu = new JMenu(Messages.getString("MindRaiderMainWindow.menuMindForger"));
@@ -1136,29 +1194,32 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setMnemonic(KeyEvent.VK_G);
         menuItem.setToolTipText("http://mindraider.sourceforge.net/mindforger.html");
         menuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
-                Launcher.launchInBrowser("http://mindraider.sourceforge.net/mindforger.html");                
+                Launcher.launchInBrowser("http://mindraider.sourceforge.net/mindforger.html");
             }
         });
         menuItem.setEnabled(true);
         menu.add(menuItem);
-        
+
         menuItem = new JMenuItem(Messages.getString("MindRaiderMainWindow.signUp"));
         menuItem.setMnemonic(KeyEvent.VK_S);
         menuItem.setToolTipText("http://www.mindforger.com");
         menuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
-                Launcher.launchInBrowser("http://www.mindforger.com");                
+                Launcher.launchInBrowser("http://www.mindforger.com");
             }
         });
         menuItem.setEnabled(true);
         menu.add(menuItem);
-        
-        menu.addSeparator();        
-        
+
+        menu.addSeparator();
+
         menuItem = new JMenuItem(Messages.getString("MindRaiderMainWindow.menuMindForgerUpload"));
         menuItem.setMnemonic(KeyEvent.VK_U);
         menuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 // fork in order to enable status updates in the main window
                 new MindForgerUploadOutlineJDialog();
@@ -1166,36 +1227,38 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         });
         menuItem.setEnabled(true);
         menu.add(menuItem);
-        
+
         menuItem = new JMenuItem(Messages.getString("MindRaiderMainWindow.menuMindForgerDownload"));
         menuItem.setMnemonic(KeyEvent.VK_U);
         menuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 downloadAnOutlineFromMindForger();
             }
         });
         menuItem.setEnabled(true);
         menu.add(menuItem);
-        
-        menu.addSeparator();        
-        
+
+        menu.addSeparator();
+
         menuItem = new JMenuItem(Messages.getString("MindRaiderMainWindow.menuMindForgerMyOutlines"));
         menuItem.setMnemonic(KeyEvent.VK_O);
         menuItem.setEnabled(true);
         menuItem.setToolTipText("http://web.mindforger.com");
         menuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
-                Launcher.launchInBrowser("http://web.mindforger.com");                
+                Launcher.launchInBrowser("http://web.mindforger.com");
             }
         });
         menu.add(menuItem);
-           
+
         menuBar.add(menu);
-        
+
         // - align Help on right -------------------------------------------------------------
 
         menuBar.add(Box.createHorizontalGlue());
-        
+
         // - help -------------------------------------------------------------
         menu = new JMenu(Messages.getString("MindRaiderJFrame.help"));
         menu.setMnemonic(KeyEvent.VK_H);
@@ -1204,6 +1267,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
                 .getString("MindRaiderJFrame.documentation"));
         menuItem.setMnemonic(KeyEvent.VK_D);
         menuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     MindRaider.outlineCustodian.loadOutline(
@@ -1222,6 +1286,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setMnemonic(KeyEvent.VK_H);
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 Launcher.launchInBrowser("http://mindraider.sourceforge.net");
             }
@@ -1231,16 +1296,18 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem = new JMenuItem(Messages.getString("MindRaiderMainWindow.reportBug"));
         menuItem.setMnemonic(KeyEvent.VK_R);
         menuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 Launcher.launchInBrowser("http://sourceforge.net/forum/?group_id=128454");
             }
         });
         menu.add(menuItem);
-        
+
         menuItem = new JMenuItem(Messages.getString("MindRaiderMainWindow.updateCheck"));
         menuItem.setMnemonic(KeyEvent.VK_F);
         menuItem.setEnabled(true);
         menuItem.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
             	// just open html page at:
             	//   http://mindraider.sourceforge.net/update-7.2.html
@@ -1260,6 +1327,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         menuItem.setMnemonic(KeyEvent.VK_A);
         menuItem.addActionListener(new ActionListener() {
 
+            @Override
             public void actionPerformed(ActionEvent e) {
                 new AboutJDialog();
             }
@@ -1290,7 +1358,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
 
     /**
      * Maximize left side bar.
-     * 
+     *
      * @param maximizeButton
      *            the maximize JButton
      */
@@ -1332,21 +1400,26 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
             this.facetLabel = facetLabel;
         }
 
+        @Override
         public void actionPerformed(ActionEvent arg0) {
             MindRaider.spidersGraph.setFacet(FacetCustodian.getInstance().getFacet(facetLabel));
             MindRaider.spidersGraph.renderModel();
         }
     }
 
+    @Override
     public void dragEnter(DropTargetDragEvent arg0) {
     }
 
+    @Override
     public void dragOver(DropTargetDragEvent arg0) {
     }
 
+    @Override
     public void dropActionChanged(DropTargetDragEvent arg0) {
     }
 
+    @Override
     public void drop(DropTargetDropEvent evt) {
         logger.debug("=-> drop");
 
@@ -1422,6 +1495,7 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
         logger.debug("<-= drop");
     }
 
+    @Override
     public void dragExit(DropTargetEvent arg0) {
     }
 
@@ -1440,11 +1514,11 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
     }
 
     private static final long serialVersionUID = 4092376300386589094L;
-    
+
     /*
      * component listener
      */
-    
+
     @Override
     public void componentHidden(ComponentEvent e) {
     }
@@ -1463,47 +1537,47 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
     }
 
     private void uploadActiveOutlineToMindForger() {
-        if (MindRaider.profile.getActiveOutline() != null) {                                    
+        if (MindRaider.profile.getActiveOutline() != null) {
             StatusBar.show("Exporting active Outline '"+MindRaider.outlineCustodian.getActiveNotebookNcName()+"'...");
             String exportDirectory = MindRaider.profile.getHomeDirectory()+File.separator+"export"+File.separator+"sharing";
             Utils.createDirectory(exportDirectory);
             String dstDirectory = exportDirectory;
             Utils.createDirectory(dstDirectory);
             dstDirectory = dstDirectory+File.separator;
-            String dstFile =                    
+            String dstFile =
                     "MindRaider-"
-                    + MindRaider.outlineCustodian.getActiveNotebookNcName() 
-                    + "-" 
-                    + Utils.getCurrentDataTimeAsPrettyString() 
+                    + MindRaider.outlineCustodian.getActiveNotebookNcName()
+                    + "-"
+                    + Utils.getCurrentDataTimeAsPrettyString()
                     + ".atom.xml";
             logger.debug(Messages.getString("MindRaiderJFrame.exportingToFile", dstFile));
-            
+
             StatusBar.show("Getting credentials...");
             MindForgerCredentialsDialog mindForgerCredentialsDialog = new MindForgerCredentialsDialog(MindForgerCredentialsDialog.Type.UPLOAD);
             boolean cancelled=mindForgerCredentialsDialog.cancelled;
             mindForgerCredentialsDialog=null;
             if(!cancelled) {
-                StatusBar.show("Exporting Outline to Atom...");        
+                StatusBar.show("Exporting Outline to Atom...");
                 MindRaider.outlineCustodian.exportOutline(OutlineCustodian.FORMAT_ATOM, dstDirectory+dstFile);
-                
+
                 StatusBar.show("Starting worker...");
                 MindForgerClient mindForgerClient = new MindForgerClient();
-                try {                        
+                try {
                     mindForgerClient.uploadOutline(
                             dstDirectory,
                             dstFile,
-                            MindRaider.mindForgerUsername, 
-                            MindRaider.mindForgerPassword, 
-                            this);            
+                            MindRaider.mindForgerUsername,
+                            MindRaider.mindForgerPassword,
+                            this);
                 } catch(Exception e) {
                     e.printStackTrace();
                     JOptionPane.showMessageDialog(this,
                             "Unable to upload Outline - "+e.getMessage(), "Outline Upload Error",
                             JOptionPane.ERROR_MESSAGE);
-                }                
-            }                        
+                }
+            }
         } else {
-            StatusBar.show("Please open an Outline to be uploaded.");            
+            StatusBar.show("Please open an Outline to be uploaded.");
         }
     }
 
@@ -1522,30 +1596,30 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
             StatusBar.show("Downloading your MindForger Outlines names - starting worker...");
             ResourceDescriptor[] outlineDescriptors;
             MindForgerClient mindForgerClient = new MindForgerClient();
-            try {                        
+            try {
                 outlineDescriptors=mindForgerClient.downloadOutlinesList(
-                        MindRaider.mindForgerUsername, 
-                        MindRaider.mindForgerPassword, 
-                        this);            
+                        MindRaider.mindForgerUsername,
+                        MindRaider.mindForgerPassword,
+                        this);
             } catch(Exception e) {
                 e.printStackTrace();
                 JOptionPane.showMessageDialog(
                         this,
-                        "Unable to download your Outline list from MindForger - "+e.getMessage(), 
+                        "Unable to download your Outline list from MindForger - "+e.getMessage(),
                         "Outline List Download Error",
                         JOptionPane.ERROR_MESSAGE);
                 return;
             }
-            
+
             if(outlineDescriptors!=null && outlineDescriptors.length>0) {
                 // show the list of downloaded outlines
-                new MindForgerDownloadOutlineJDialog(outlineDescriptors);                
+                new MindForgerDownloadOutlineJDialog(outlineDescriptors);
             } else {
-                StatusBar.show("No descriptors found! Please create an Outline in MindForger first.");                
+                StatusBar.show("No descriptors found! Please create an Outline in MindForger first.");
             }
         }
     }
-    
+
     private void exportActiveOutlineToAtom() {
         if (MindRaider.profile.getActiveOutline() == null) {
             JOptionPane
@@ -1575,9 +1649,9 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
             final String dstFileName = dstDirectory
                     + File.separator
                     + "MindRaider-"
-                    + MindRaider.outlineCustodian.getActiveNotebookNcName() 
-                    + "-" 
-                    + Utils.getCurrentDataTimeAsPrettyString() 
+                    + MindRaider.outlineCustodian.getActiveNotebookNcName()
+                    + "-"
+                    + Utils.getCurrentDataTimeAsPrettyString()
                     + ".atom.xml";
             logger.debug(Messages.getString("MindRaiderJFrame.exportingToFile", dstFileName));
 
@@ -1599,14 +1673,15 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
             final File file = fc.getSelectedFile();
             MindRaider.profile.deleteActiveModel();
             logger.debug(Messages.getString("MindRaiderJFrame.importingTWikiTopic", file.getAbsolutePath()));
-            
+
             // perform it async
             final SwingWorker worker = new SwingWorker() {
+                @Override
                 public Object construct() {
                     ProgressDialogJFrame progressDialogJFrame = new ProgressDialogJFrame("Atom Import","Importing Outline from Atom...");
                     try {
                         MindRaider.outlineCustodian.importNotebook(
-                                OutlineCustodian.FORMAT_ATOM,(file!=null?file.getAbsolutePath():null), 
+                                OutlineCustodian.FORMAT_ATOM,(file!=null?file.getAbsolutePath():null),
                                 progressDialogJFrame);
                     } finally {
                         if (progressDialogJFrame != null) {
@@ -1624,7 +1699,8 @@ public final class MindRaiderMainWindow extends JFrame implements DropTargetList
 
     public void handleMindForgerActiveOutlineUpload() {
         Thread thread = new Thread() {
-            public void run() {                
+            @Override
+            public void run() {
                 try {
                     uploadActiveOutlineToMindForger();
                 } catch (Exception e) {
